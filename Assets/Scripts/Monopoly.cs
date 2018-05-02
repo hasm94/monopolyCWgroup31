@@ -1,13 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class Monopoly : MonoBehaviour {
+public class Monopoly : MonoBehaviour {
 
 	public enum TurnPhase {NEW_TURN,
-		WAITING, DONE_CLICKING,
-		WAITING_FOR_ROLL, DONE_ROLLING,
+		WAITING, DONE_CLICKING, 
+		WAITING_FOR_ROLL, DONE_ROLLING, 
 		WAITING_FOR_ANIMATION, ANIMATING, DONE_ANIMATING
 	};
 	public TurnPhase currentPhase;
@@ -16,12 +16,12 @@ public static class Monopoly : MonoBehaviour {
 	public bool isDoneRolling = false;
 	public bool isDoneAnimating = false;
 
+	public bool newTurnPossible = true;
+
 	public int noPlayers;
 
 	public Player[] players;
 	public Tile[] tiles;
-	public Street[] streets;
-
 	public int currentPlayerId;
 
 	public int diceTotal;
@@ -40,23 +40,86 @@ public static class Monopoly : MonoBehaviour {
 
 	public void NewTurn()
 	{
-		if (currentPhase != TurnPhase.NEW_TURN) {
+
+//		
+		if (newTurnPossible) {
+			newTurnPossible = false;
+		} else {
+			Debug.Log ("Wait till turn is over");
 			return;
-		};
+		}
+//			currentPhase = Monopoly.TurnPhase.WAITING;
 
-		currentPhase = Monopoly.TurnPhase.WAITING;
+			isDoneClicking = false;
+			isDoneRolling = false;
+			isDoneAnimating = false;
 
-		isDoneClicking = false;
-		isDoneRolling = false;
-		isDoneAnimating = false;
+			//TODO: advance player via player id
+			
+			players [currentPlayerId].MakeMove ();
 
-		//TODO: advance player via player id
-		players[currentPlayerId].MakeMove();
-		players[currentPlayerId].TileDescription();
+			if (players[currentPlayerId].diceRoller.isRolledOver) {
+			Debug.Log ("isDoneClicking should be false = " + isDoneClicking);
+			Debug.Log ("isDoneRolling should be false = " + isDoneRolling);
+			Debug.Log ("isDoneAnimating should be false = " + isDoneAnimating);
+				return;
+			}
 
-		currentPlayerId = (currentPlayerId + 1) % noPlayers;
+			players [currentPlayerId].TileDescription ();
+
+			currentPlayerId = (currentPlayerId + 1) % noPlayers;
+//		}
 
 	}
+
+
+	public void possibleActions()
+	{
+		Tile cTile = players [currentPlayerId].getCurrentTile ();
+
+		if (cTile.isPurchasable) {
+			Tile pTile = (Purchasable)cTile;
+			Debug.Log ("You have landed on a purchasable tile.");
+			if (pTile.hasOwner ()) {
+				
+				if (pTile.getOwner () == players [currentPlayerId]) {
+					Debug.Log ("You landed on your own tile. Do nothing.");
+					return;
+				} else {
+					Debug.Log ("You have landed on a tile that is owned by another player.");
+
+					if (pTile.isMortgaged ()) {
+						//nothing happens
+						Debug.Log ("This tile is mortgaged. Do nothing.");
+						return;
+
+					} else {
+						Debug.Log ("pay player" + pTile.getOwner() + " a rent of " + pTile.rent);
+						pTile.payRent (players [currentPlayerId]);
+					}
+				}
+
+
+			
+			} else {
+				
+				//TODO: Popup for actions: buy property, or send to auction.
+
+
+			}
+		} else {
+
+			Tile upTile = (Nonpurchasable)cTile;
+			Debug.Log ("You have landed on " + cTile.name + ". Complete given action");
+			upTile.completeAction();
+
+
+		}
+
+	}
+
+
+
 
 	// Update is called once per frame
 	void Update () {
@@ -64,17 +127,8 @@ public static class Monopoly : MonoBehaviour {
 		if (isDoneClicking && isDoneRolling && isDoneAnimating)
 		{
 			//Debug.Log("Turn is complete!");
+			newTurnPossible = true;
 			currentPhase = Monopoly.TurnPhase.NEW_TURN;
 		}
 	}
-
-	public int getStreetId(Colour colour){
-		for(Street street: streets){
-			if(street.colour == colour){
-				return street;
-			}
-		}
-		return null;
-	}
-
 }
