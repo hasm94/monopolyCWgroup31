@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class Monopoly : MonoBehaviour {
 
 	public enum TurnPhase {NEW_TURN,
-		WAITING, DONE_CLICKING, 
-		WAITING_FOR_ROLL, DONE_ROLLING, 
+		WAITING, DONE_CLICKING,
+		WAITING_FOR_ROLL, DONE_ROLLING,
 		WAITING_FOR_ANIMATION, ANIMATING, DONE_ANIMATING
 	};
 	public TurnPhase currentPhase;
@@ -20,6 +20,8 @@ public class Monopoly : MonoBehaviour {
 
 	public Player[] players;
 	public Tile[] tiles;
+	public Street[] streets;
+	
 	public int currentPlayerId;
 
 	public int diceTotal;
