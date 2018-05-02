@@ -131,4 +131,13 @@ public class Monopoly : MonoBehaviour {
 			currentPhase = Monopoly.TurnPhase.NEW_TURN;
 		}
 	}
+	
+	public int getStreetId(Colour colour){
+		for(Street street: streets){
+			if(street.colour == colour){
+				return street;
+			}
+		}
+		return null;
+	}
 }
