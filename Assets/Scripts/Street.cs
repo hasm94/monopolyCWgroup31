@@ -35,5 +35,10 @@ public class Street {
         return true;
     }
 
+    public Colour getColour(){
+		return colour;
+	}
+
+
 
 }

@@ -61,7 +61,7 @@ public class Purchasable : Tile {
 		} else {
 			return false;
 		}
-			
+
 	}
 
 	//Is run when a player wants to own a property, checks that the playre has enough on their balance
@@ -113,6 +113,10 @@ public class Purchasable : Tile {
 
 		isMortgaged = false;
 
+	}
+
+	public Colour getColour(){
+		return colour;
 	}
 
 	//Abstract method to make sure all of the subclasses have a getRent method

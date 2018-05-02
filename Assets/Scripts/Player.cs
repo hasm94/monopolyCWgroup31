@@ -272,6 +272,16 @@ public class Player : MonoBehaviour {
 		boughtProperties.remove(sale);
 	}
 
+	public int ownsNoStreet(Street cStreet){
+		int count = 0;
+		for(int i = 0; i < boughtProperties.Count(); i++){
+			if(boughtProperties[i].getColour() == cStreet.getColour()){
+				count++;
+			}
+		}
+		return count;
+	}
+
 }
 
 //if (Player.isBankrupt())
