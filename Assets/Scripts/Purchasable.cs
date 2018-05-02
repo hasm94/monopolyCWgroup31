@@ -50,6 +50,11 @@ public class Purchasable : Tile {
         }
     }
 
+    public void sellsProperty(){
+        owner = null;
+        owner.earns(propertyCost);
+    }
+
     //Mortgages the property, adds to the players' balance
     public void mortgageProp(){
         owner.earns(mortgage);

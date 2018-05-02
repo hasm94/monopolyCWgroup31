@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 
-public class DiceRoller : MonoBehaviour {
+public static class DiceRoller : MonoBehaviour {
 
 	private Monopoly theGameState;
 
@@ -13,19 +13,19 @@ public class DiceRoller : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
 		theGameState = GameObject.FindObjectOfType<Monopoly>();
 
 		dice = new int[2];
 	}
-	
+
 	// Update is called once per frame
-	void Update () 
-	{		
+	void Update ()
+	{
 	}
 
-	// Generate two random numbers. 
+	// Generate two random numbers.
 	// Check whether double roll is due.
 	// Print the graphic.
 	public void RollTheDice()
@@ -59,4 +59,6 @@ public class DiceRoller : MonoBehaviour {
 		theGameState.isDoneRolling = true;
 		//theGameState.currentPhase = Monopoly.TurnPhase.DONE_ROLLING;
 	}
+
+
 }
