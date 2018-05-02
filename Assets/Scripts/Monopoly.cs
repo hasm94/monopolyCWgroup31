@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Monopoly : MonoBehaviour {
+public static class Monopoly : MonoBehaviour {
 
 	public enum TurnPhase {NEW_TURN,
 		WAITING, DONE_CLICKING,
@@ -21,7 +21,7 @@ public class Monopoly : MonoBehaviour {
 	public Player[] players;
 	public Tile[] tiles;
 	public Street[] streets;
-	
+
 	public int currentPlayerId;
 
 	public int diceTotal;
@@ -68,5 +68,13 @@ public class Monopoly : MonoBehaviour {
 		}
 	}
 
+	public int getStreetId(Colour colour){
+		for(Street street: streets){
+			if(street.colour == colour){
+				return street;
+			}
+		}
+		return null;
+	}
 
 }

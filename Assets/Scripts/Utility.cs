@@ -20,8 +20,13 @@ public class Utility : Purchasable {
     public void payRent(Player player){
         int[] cRoll = DiceRoller.dice;
         int rollSum = cRoll[1] + cRoll[2];
-        //TODO change it so that the enum affects the multiplier
-        player.spends(rollSum*4);
-        owner.earns(rollSum*4);
+        utilStreet = Monopoly.getStreet(UTILITY);
+        int ownsNoOfStreet = player.ownsNoStreet(utilStreet);
+        int mult = 4;
+        if(ownsNoOfStreet = 2){
+            mult = 10;
+        } else
+        player.spends(rollSum*mult);
+        owner.earns(rollSum*mult);
     }
 }
