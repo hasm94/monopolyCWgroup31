@@ -24,11 +24,16 @@ public class Player : MonoBehaviour {
 
 	bool isAnimating = false;
 
+	//Game logic variables, related to the abstraction of the game
+	private int balance;
+	private List<Purchasable> boughtProperties = new List<Purchasable>();
+	private  int lapsFinished = 0;
+
 
 	// Use this for initialization
 	void Start () {
 
-			
+
 		diceRoller = GameObject.FindObjectOfType<DiceRoller>();
 		theGameState = GameObject.FindObjectOfType<Monopoly>();
 
@@ -38,14 +43,20 @@ public class Player : MonoBehaviour {
 		smoothTime = 0.1f;
 		smoothDistance = 0.01f;
 		smoothHeight = 0.1f;
+
+		//Gameplay initialisation
+		//Change to the starting amount that the player receives
+		int balance = 10000;
+
+
 	}
 
-	public void MakeMove() 
+	public void MakeMove()
 	{
 		if (isAnimating) {
 			return;
 		}
-			
+
 
 		//Debug.Log ("waiting for roll = " + theGameState.currentPhase);
 
@@ -71,8 +82,8 @@ public class Player : MonoBehaviour {
 
 		moveQueue = new Tile[spacesToMove];
 		Tile finalTile = currentTile;
-		
-		for (int i = 0; i < spacesToMove; i++) 
+
+		for (int i = 0; i < spacesToMove; i++)
 		{
 			currentTile = currentTile.NextTile[0];
 			moveQueue [i] = currentTile;
@@ -97,7 +108,7 @@ public class Player : MonoBehaviour {
 			Tile nextTile = moveQueue [moveQueueIndex];
 			SetNewTargetPosition (nextTile.transform.position);
 			moveQueueIndex++;
-		} 
+		}
 		else {
 			theGameState.isDoneAnimating = true;
 			this.isAnimating = false;
@@ -217,7 +228,7 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	//TODO: Animated dice display drop along when smoothdamp.y is set to 0 (Contained in second if statement
-	void Update () 
+	void Update ()
 	{
 		if (isAnimating == false) {
 			return;
@@ -226,7 +237,7 @@ public class Player : MonoBehaviour {
 		if (Vector3.Distance(new Vector3(this.transform.position.x, targetPosition.y, this.transform.position.z), targetPosition) < smoothDistance) {
 			//Reached target, need to check height.
 			//If heighter than smoothing distance for animation, drop to zero.
-			//Otherwise, move to next tile in queue.  
+			//Otherwise, move to next tile in queue.
 			if (moveQueue != null && moveQueueIndex == moveQueue.Length && this.transform.position.y > smoothDistance) {
 				this.transform.position = Vector3.SmoothDamp (this.transform.position, new Vector3 (this.transform.position.x, 0, this.transform.position.z), ref velocity, smoothTime);
 			} else {
@@ -240,6 +251,25 @@ public class Player : MonoBehaviour {
 		} else {
 			this.transform.position = Vector3.SmoothDamp (this.transform.position, new Vector3(targetPosition.x, smoothHeight, targetPosition.z), ref velocity, smoothTime);
 		}
+	}
+
+
+	public void earns(int bChange){
+		balance += bChange;
+	}
+
+	public void spends(int bChange){
+		balance -= bChange;
+	}
+
+	public void buyTile(Purchasable purchase){
+		purchase.getsBoughtBy(this);
+		boughtProperties.Add(purchase);
+	}
+
+	public void sellTile(Purchasable sale){
+		sale.sellProperty(this);
+		boughtProperties.remove(sale);
 	}
 
 }
