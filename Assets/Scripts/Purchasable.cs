@@ -10,16 +10,19 @@ public class Purchasable : Tile {
 	private Tile[] NextTile;
     private int propertyCost;
     private Player owner;
+    private int rent[];
     private int mortgage;
     private boolean isMortgaged;
+    private Colour colour;
 
 	// Use this for initialization
-	void Start (String n, Tile[] nt int c)
+	void Start (String n, Tile[] nt, int c, Colour col)
     : base(n, nt) {
         name = n;
         NextTile = nt;
         cost = c;
         owner = null;
+        colour = col;
 	}
 
 	// Update is called once per frame
@@ -59,5 +62,7 @@ public class Purchasable : Tile {
         isMortgaged = false;
     }
 
-    public abstract
+    //Abstract method to make sure all of the subclasses have a getRent method
+    public abstract void payRent(Player player);
+
 }
