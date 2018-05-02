@@ -2,17 +2,17 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class Transport : PropertyTile {
-
-	public String name;
-	public int tValue;
-	public int[] rent;
+public class Tile : MonoBehaviour {
 
 	public Tile[] NextTile;
+    
+    public int cost;
+    public int[] rent;
+    
 
 	// Use this for initialization
-	void Start (String n) {
-        name = n
+	void Start () : base(){
+
 	}
 	
 	// Update is called once per frame

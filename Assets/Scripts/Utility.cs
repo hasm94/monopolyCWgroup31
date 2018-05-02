@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class Utility : Tile {
+public class Utility : PropertyTile {
 
 	//public String name;
 	public int initialValue;

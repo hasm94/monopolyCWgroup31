@@ -2,16 +2,22 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class Property : Tile {
+public class Property : PropertyTile {
 
 	public enum Colour {MAROON, NAVY_BLUE, PINK, ORANGE, RED, YELLOW, GREEN, BLUE};
+
+    
+    //Variety of variables that define the base information of the property, 
+	public static String name;
+	public static int cost;
+	public static int houseValue;
+	public static int mortageValue;
+    public static int[] rent;
+    public int noOfHouses;
+    public Player owner;
 	public Colour colour;
 
-	//public String name;
-	public int initialValue;
-	public int hotelValue;
-	public int mortageValue;
-
+    
 	public Tile[] NextTile;
 
 	// Use this for initialization
@@ -23,4 +29,6 @@ public class Property : Tile {
 	void Update () {
 	
 	}
+    
+    
 }
