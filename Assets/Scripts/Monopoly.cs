@@ -22,6 +22,7 @@ public class Monopoly : MonoBehaviour {
 
 	public Player[] players;
 	public Tile[] tiles;
+    public Street[] streets;
 	public int currentPlayerId;
 
 	public int diceTotal;
@@ -58,12 +59,13 @@ public class Monopoly : MonoBehaviour {
 			
 			players [currentPlayerId].MakeMove ();
 
-			if (players[currentPlayerId].diceRoller.isRolledOver) {
-			Debug.Log ("isDoneClicking should be false = " + isDoneClicking);
-			Debug.Log ("isDoneRolling should be false = " + isDoneRolling);
-			Debug.Log ("isDoneAnimating should be false = " + isDoneAnimating);
+			/* if (players[currentPlayerId].diceRoller.isRolledOver) {
+			    Debug.Log ("isDoneClicking should be false = " + isDoneClicking);
+			    Debug.Log ("isDoneRolling should be false = " + isDoneRolling);
+			    Debug.Log ("isDoneAnimating should be false = " + isDoneAnimating);
 				return;
 			}
+            */
 
 			players [currentPlayerId].TileDescription ();
 
@@ -77,8 +79,8 @@ public class Monopoly : MonoBehaviour {
 	{
 		Tile cTile = players [currentPlayerId].getCurrentTile ();
 
-		if (cTile.isPurchasable) {
-			Tile pTile = (Purchasable)cTile;
+		if (cTile.isPurchasable()) {
+            Purchasable pTile = (Purchasable)cTile;
 			Debug.Log ("You have landed on a purchasable tile.");
 			if (pTile.hasOwner ()) {
 				
@@ -88,13 +90,13 @@ public class Monopoly : MonoBehaviour {
 				} else {
 					Debug.Log ("You have landed on a tile that is owned by another player.");
 
-					if (pTile.isMortgaged ()) {
+					if (pTile.isMortgaged()) {
 						//nothing happens
 						Debug.Log ("This tile is mortgaged. Do nothing.");
 						return;
 
 					} else {
-						Debug.Log ("pay player" + pTile.getOwner() + " a rent of " + pTile.rent);
+						Debug.Log ("pay player" + pTile.getOwner() + " a rent of " + pTile);
 						pTile.payRent (players [currentPlayerId]);
 					}
 				}
@@ -109,7 +111,7 @@ public class Monopoly : MonoBehaviour {
 			}
 		} else {
 
-			Tile upTile = (Nonpurchasable)cTile;
+			NonPurchasable upTile = (NonPurchasable) cTile;
 			Debug.Log ("You have landed on " + cTile.name + ". Complete given action");
 			upTile.completeAction();
 
@@ -133,11 +135,11 @@ public class Monopoly : MonoBehaviour {
 	}
 	
 	public int getStreetId(Colour colour){
-		for(Street street: streets){
-			if(street.colour == colour){
-				return street;
+		for(int i = 0; i < streets.Length; i++){
+			if(streets[i].streetColour == colour){
+				return i;
 			}
 		}
-		return null;
+		return -1;
 	}
 }

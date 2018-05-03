@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NonPurchasable : MonoBehaviour {
+public class NonPurchasable : Tile {
 
 
 
@@ -11,7 +11,10 @@ public class NonPurchasable : MonoBehaviour {
 	}
 
 
-	public abstract void completeAction();
+	public void completeAction()
+    {
+
+    }
 
 
 
@@ -20,4 +23,9 @@ public class NonPurchasable : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public new bool isPurchasable()
+    {
+        return false;
+    }
 }

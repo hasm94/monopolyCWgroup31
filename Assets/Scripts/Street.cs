@@ -9,7 +9,7 @@ public class Street {
     //Basic variables, that are needed to calculate different things
     public Colour streetColour;
 	private int noOfProperties;
-    private Property[] properties;
+    private Purchasable[] properties;
     private int houseCost;
 
     //Constructor method
@@ -26,7 +26,7 @@ public class Street {
     }
 
     //Checks if the player owns all of the properties in this street
-    public boolean checkIfOwned(Player player){
+    public bool checkIfOwned(Player player){
         for(int i = 0; i < noOfProperties; i++){
             if(player != properties[i].getOwner()){
                 return false;
@@ -36,7 +36,7 @@ public class Street {
     }
 
     public Colour getColour(){
-		return colour;
+		return streetColour;
 	}
 
 

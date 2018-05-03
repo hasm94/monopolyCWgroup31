@@ -7,9 +7,9 @@ public class Transport : Purchasable {
     int numberOfHouses;
 
 
-    public void payRent(Player player){
-        utilStreet = Monopoly.getStreet(UTILITY);
-        int ownsNoOfStreet = player.ownsNoStreet(utilStreet);
+    new public void payRent(Player player){
+        
+        int ownsNoOfStreet = player.ownsNoStreet(street);
         player.spends(rent[ownsNoOfStreet-1]);
     }
 

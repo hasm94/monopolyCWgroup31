@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 
 	private Monopoly theGameState;
-	private DiceRoller diceRoller;
+	public DiceRoller diceRoller;
 
 	public Tile startingTile;
 	private Tile currentTile;
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour {
 
 		for (int i = 0; i < spacesToMove; i++)
 		{
-			currentTile = currentTile.NextTile[0];
+			currentTile = (currentTile.getNextTile())[0];
 			moveQueue [i] = currentTile;
 		}
 
@@ -253,6 +253,11 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+    public Tile getCurrentTile()
+    {
+        return currentTile;
+    }
+
 
 	public void earns(int bChange){
 		balance += bChange;
@@ -262,20 +267,25 @@ public class Player : MonoBehaviour {
 		balance -= bChange;
 	}
 
+    public int getBalance()
+    {
+        return balance;
+    }
+
 	public void buyTile(Purchasable purchase){
 		purchase.getsBoughtBy(this);
 		boughtProperties.Add(purchase);
 	}
 
 	public void sellTile(Purchasable sale){
-		sale.sellProperty(this);
-		boughtProperties.remove(sale);
+		sale.sellsProperty();
+		boughtProperties.RemoveAll(z => z == sale);
 	}
 
 	public int ownsNoStreet(Street cStreet){
 		int count = 0;
-		for(int i = 0; i < boughtProperties.Count(); i++){
-			if(boughtProperties[i].getColour() == cStreet.getColour()){
+		for(int i = 0; i < boughtProperties.Count; i++){
+			if(boughtProperties[i].getStreet() == cStreet){
 				count++;
 			}
 		}

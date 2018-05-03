@@ -5,13 +5,13 @@ using System.Collections;
 public class Tile : MonoBehaviour {
 
     
-    private String name;
-	private Tile[] NextTile;
+    private String tileName;
+	private Tile[] nextTile;
 
 	// Use this for initialization
-	void Start (String n, Tile[] nt) {
+	public void Start (String n, Tile[] nt) {
         name = n;
-        NextTile = nt;
+        nextTile = nt;
 	}
 	
 	// Update is called once per frame
@@ -20,10 +20,15 @@ public class Tile : MonoBehaviour {
 	}
     
     public String getName(){
-        return name;
+        return tileName;
     }
     
     public Tile[] getNextTile(){
-        return NextTile;
+        return nextTile;
+    }
+
+    public bool isPurchasable()
+    {
+        return false;
     }
 }

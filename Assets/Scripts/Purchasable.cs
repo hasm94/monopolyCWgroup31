@@ -4,26 +4,23 @@ using System.Collections;
 
 public class Purchasable : Tile {
 
-	//Variables applicable to all different properties
+    //Variables applicable to all different properties
 
-	private String name;
-	private Tile[] NextTile;
-	private int propertyCost;
-	private Player owner;
-	private int rent;
-	private int mortgage;
-	private boolean isMortgaged;
-	private Colour colour;
+    protected int propertyCost;
+	protected Player owner;
+	protected int[] rent;
+	protected int mortgage;
+    protected bool mortgaged;
+    protected Street street;
 
 	// Use this for initialization
 
-	void Start (String n, Tile[] nt, int c, Colour col) : base(n) {
+	public void Start (String n, Tile[] nt, int c, Street st) {
 
-		name = n;
-		NextTile = nt;
-		cost = c;
+        base.Start(n, nt);
+		propertyCost = c;
 		owner = null;
-		colour = col;
+		street = st;
 
 	}
 
@@ -37,24 +34,6 @@ public class Purchasable : Tile {
 
 	}
 
-
-
-	//Returns the name of the property
-
-	public String getName(){
-
-		return name;
-
-	}
-
-
-
-	public Tile[] getNextTile(){
-
-		return NextTile;
-
-	}
-
 	public bool hasOwner() {
 		if (owner != null) {
 			return true;
@@ -64,21 +43,26 @@ public class Purchasable : Tile {
 
 	}
 
+    public Player getOwner()
+    {
+        return owner;
+    }
+
 	//Is run when a player wants to own a property, checks that the playre has enough on their balance
 
 	public void getsBoughtBy(Player player){
 
 		if(player.getBalance() > propertyCost && owner == null){
 
-			player.spends(cost);
+			player.spends(propertyCost);
 
 			owner = player;
 
-			player.addProperty(this);
+			player.buyTile(this);
 
 		} else {
 
-			System.Write("Player doesn't have enough money to buy this property");
+			Debug.Log("Player doesn't have enough money to buy this property");
 
 		}
 
@@ -99,7 +83,7 @@ public class Purchasable : Tile {
 
 		owner.earns(mortgage);
 
-		isMortgaged = True;
+		mortgaged = true;
 
 	}
 
@@ -111,17 +95,30 @@ public class Purchasable : Tile {
 
 		owner.spends(mortgage);
 
-		isMortgaged = false;
+		mortgaged = false;
 
 	}
 
-	public Colour getColour(){
-		return colour;
+	public Street getStreet(){
+		return street;
 	}
 
 	//Abstract method to make sure all of the subclasses have a getRent method
 
-	public abstract void payRent(Player player);
+	public void payRent(Player player)
+    {
+
+    }
+
+    public new bool isPurchasable()
+    {
+        return true;
+    }
+
+    public bool isMortgaged()
+    {
+        return mortgaged;
+    }
 
 
 

@@ -7,8 +7,9 @@ public class Utility : Purchasable {
     int numberOfHouses;
 
 	// Use this for initialization
-	void Start (String n, Tile[] nt, int c, Colour col)
-    : base(n, nt, c, col) {
+	new void Start (String n, Tile[] nt, int c, Street st)
+    {
+        base.Start(n, nt, c, st);
         numberOfHouses = 0;
 	}
 
@@ -17,13 +18,12 @@ public class Utility : Purchasable {
 
 	}
 
-    public void payRent(Player player){
-        int[] cRoll = DiceRoller.dice;
+    new public void payRent(Player player){
+        int[] cRoll = player.diceRoller.getRoll();
         int rollSum = cRoll[1] + cRoll[2];
-        utilStreet = Monopoly.getStreet(UTILITY);
-        int ownsNoOfStreet = player.ownsNoStreet(utilStreet);
+        int ownsNoOfStreet = player.ownsNoStreet(street);
         int mult = 4;
-        if(ownsNoOfStreet = 2){
+        if(ownsNoOfStreet == 2){
             mult = 10;
         } else
         player.spends(rollSum*mult);

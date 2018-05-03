@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 
-public static class DiceRoller : MonoBehaviour {
+public class DiceRoller : MonoBehaviour {
 
 	private Monopoly theGameState;
 
@@ -59,6 +59,11 @@ public static class DiceRoller : MonoBehaviour {
 		theGameState.isDoneRolling = true;
 		//theGameState.currentPhase = Monopoly.TurnPhase.DONE_ROLLING;
 	}
+
+    public int[] getRoll()
+    {
+        return dice;
+    }
 
 
 }

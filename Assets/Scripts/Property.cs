@@ -6,9 +6,10 @@ public class Property : Purchasable {
 
     int numberOfHouses;
 
-	// Use this for initialization
-	void Start (String n, Tile[] nt, int c, Colour col)
-    : base(n, nt, c, col) {
+    // Use this for initialization
+    new void Start (String n, Tile[] nt, int c, Street st)
+    {
+        base.Start(n, nt, c, st);
         numberOfHouses = 0;
 	}
 
@@ -17,25 +18,17 @@ public class Property : Purchasable {
 
 	}
 
-    public String getName(){
-        return name;
-    }
-
-    public Tile[] getNextTile(){
-        return NextTile;
-    }
-
-    public void payRent(Player player){
-        player.spend(rent[numberOfHouses]);
+    new public void payRent(Player player){
+        player.spends(base.rent[numberOfHouses]);
     }
 
     public void buildHouse(){
         numberOfHouses++;
-        owner.spends(houseCost);
+        owner.spends(street.getHouseCost());
     }
 
     public void sellHouse(){
         numberOfHouses--;
-        owner.earns(houseCost);
+        owner.earns(street.getHouseCost());
     }
 }
