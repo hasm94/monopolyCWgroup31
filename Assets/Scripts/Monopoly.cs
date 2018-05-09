@@ -20,11 +20,12 @@ public class Monopoly : MonoBehaviour {
 
 	public int noPlayers;
 
-	public Player[] players;
-	public Tile[] tiles;
+	public static Player[] players;
+	public static Tile[] tiles;
     public Street[] streets;
-    public int freeParkingVal;
+    public static int freeParkingVal;
 	public int currentPlayerId;
+    
 
 	public int diceTotal;
 
@@ -81,39 +82,24 @@ public class Monopoly : MonoBehaviour {
         int[] r21 = { 35, 175, 500, 1100, 1300, 1500 };
         int[] r22 = { 50, 200, 600, 1400, 1700, 2000 };
 
-        int[] rStation = { 0, 25, 50, 100 };
-
-        /*Action act = new Action(1, 100);
-        Card c = new Card("Get paid £100", act);
-        potLuckPile.add(c);
-        act = new Action(2, 100);
-        c = new Card("paid £100", act);
-        potLuckPile.add(c);
-
-        act = new Action(1, 100);
-        c = new Card("paid £100", act);
-        oppKnocksPile.add(c);
-        act = new Action(2, 100);
-        c = new Card("paid £100", act);
-        oppKnocksPile.add(c);
-        */
+        int[] rOther = { 0, 25, 50, 100 };
 
         tiles[0] = new Go("Go");
         tiles[1] = new Property("Crapper Street", 60, r1, brown);
         tiles[2] = new PotLuck("Potluck");
         tiles[3] = new Property("Gangster Paradise", 60, r2, brown);
         tiles[4] = new TaxTile("Income Tax", 200);
-        tiles[5] = new Transport("Brighton Station", 200, rStation, station);
+        tiles[5] = new Transport("Brighton Station", 200, rOther, station);
         tiles[6] = new Property("Weeping Angel", 100, r3, blue);
         tiles[7] = new OpportunityKnocks("Opportunity Knocks");
         tiles[8] = new Property("Potts Avenue", 100, r4, blue);
         tiles[9] = new Property("Nardole Drive", 120, r5, blue);
         tiles[10] = new Jail("Jail");
         tiles[11] = new Property("Skywalker Drive", 140, r6, purple);
-        tiles[12] = new Utility("Tesla Power Co", 150, rStation, utility);
+        tiles[12] = new Utility("Tesla Power Co", 150, rOther, utility);
         tiles[13] = new Property("Wookie Hole", 140, r7, purple);
         tiles[14] = new Property("Rey Lane", 160, r8, purple);
-        tiles[15] = new Transport("Hove Station", 200, rStation, station);
+        tiles[15] = new Transport("Hove Station", 200, rOther, station);
         tiles[16] = new Property("Cooper Drive", 180, r9, orange);
         tiles[17] = new PotLuck("Potluck");
         tiles[18] = new Property("Wolowitz Street", 180, r10, orange);
@@ -123,17 +109,17 @@ public class Monopoly : MonoBehaviour {
         tiles[22] = new OpportunityKnocks("Opportunity Knocks");
         tiles[23] = new Property("Mulan Rouge", 220, r13, red);
         tiles[24] = new Property("Han Xin Gardens", 240, r14, red);
-        tiles[25] = new Transport("Falmer Station", 200, rStation, station);
+        tiles[25] = new Transport("Falmer Station", 200, rOther, station);
         tiles[26] = new Property("Kirk Close", 260, r15, yellow);
         tiles[27] = new Property("Picard Avenue", 260, r16, yellow);
-        tiles[28] = new Utility("Edison Water", 150, rStation, utility);
+        tiles[28] = new Utility("Edison Water", 150, rOther, utility);
         tiles[29] = new Property("Crusher Creek", 280, r17, yellow);
         tiles[30] = new GoToJail("Go to Jail");
         tiles[31] = new Property("Sirat Mews", 300, r18, green);
         tiles[32] = new Property("Ghengis Crescent", 300, r19, green);
         tiles[33] = new PotLuck("Potluck");
         tiles[34] = new Property("Ibis Close", 320, r20, green);
-        tiles[35] = new Transport("Lewes Station", 200, rStation, station);
+        tiles[35] = new Transport("Lewes Station", 200, rOther, station);
         tiles[36] = new OpportunityKnocks("Opportunity Knocks");
         tiles[37] = new Property("Hawking Way", 350, r21, d_blue);
         tiles[38] = new TaxTile("Super Tax", 100);
@@ -169,19 +155,60 @@ public class Monopoly : MonoBehaviour {
 			isDoneRolling = false;
 			isDoneAnimating = false;
 
-			//TODO: advance player via player id
-			
-			players [currentPlayerId].MakeMove ();
+        //TODO: advance player via player id
 
-			/*if (players[currentPlayerId].diceRoller.isRolledOver) {
-			    Debug.Log ("isDoneClicking should be false = " + isDoneClicking);
-			    Debug.Log ("isDoneRolling should be false = " + isDoneRolling);
-			    Debug.Log ("isDoneAnimating should be false = " + isDoneAnimating);
-				return;
-			}
-            */
+        Player cPlayer = players[currentPlayerId];
 
-			players [currentPlayerId].TileDescription ();
+
+        //This is a really ugly if statement and should be improved.
+        if (cPlayer.IsInJail())
+        {
+            cPlayer.diceRoller.RollTheDice();
+            int[] first = cPlayer.GetCurrentRoll();
+            if (first[0] == first[1])
+            {
+                Debug.Log("Player got out of Jail");
+                cPlayer.MakeMoveOutOfJail();
+            } else
+            {
+                int[] second = cPlayer.GetCurrentRoll();
+                if (second[0] == second[1])
+                {
+                    Debug.Log("Player got out of Jail");
+                    cPlayer.MakeMoveOutOfJail();
+                }
+                else
+                {
+                    int[] third = cPlayer.GetCurrentRoll();
+                    if (third[0] == third[1])
+                    {
+                        Debug.Log("Player got out of Jail");
+                        cPlayer.MakeMoveOutOfJail();
+                    } else
+                    {
+                        Debug.Log("Player didn't get out of Jail");
+                    }
+                }
+            }
+        } else {
+           cPlayer.MakeMove();
+        }
+
+        PossibleActions();
+        OpenActions();
+
+
+
+
+        /*if (players[currentPlayerId].diceRoller.isRolledOver) {
+            Debug.Log ("isDoneClicking should be false = " + isDoneClicking);
+            Debug.Log ("isDoneRolling should be false = " + isDoneRolling);
+            Debug.Log ("isDoneAnimating should be false = " + isDoneAnimating);
+            return;
+        }
+        */
+
+        players[currentPlayerId].TileDescription ();
 
 			currentPlayerId = (currentPlayerId + 1) % noPlayers;
 //		}
@@ -189,36 +216,50 @@ public class Monopoly : MonoBehaviour {
 	}
 
 
-	public void possibleActions()
-	{
-		Tile cTile = players [currentPlayerId].getCurrentTile ();
+    public void PossibleActions()
+    {
+
+        Player cPlayer = players[currentPlayerId];
+
+        Tile cTile = players[currentPlayerId].getCurrentTile();
 
 		if (cTile.isPurchasable()) {
             Purchasable pTile = (Purchasable)cTile;
 			Debug.Log ("You have landed on a purchasable tile.");
-			if (pTile.hasOwner ()) {
+			if (pTile.HasOwner ()) {
 				if (pTile.GetOwner () == players [currentPlayerId]) {
 					Debug.Log ("You landed on your own tile. Do nothing.");
 					return;
 				} else {
 					Debug.Log ("You have landed on a tile that is owned by another player.");
 
-					if (pTile.isMortgaged()) {
-						//nothing happens
-						Debug.Log ("This tile is mortgaged. Do nothing.");
-						return;
-
-					} else {
+                    if (pTile.IsMortgaged()) {
+                        //nothing happens
+                        Debug.Log("This tile is mortgaged. Do nothing.");
+                        return;
+                    } else if(pTile.GetOwner().IsInJail())
+                    {
+                        //nothing happens
+                        Debug.Log("The owne is in prison. Do nothing.");
+                        return;
+                    } else {
 						Debug.Log ("pay player" + pTile.GetOwner() + " a rent of " + pTile);
 						pTile.payRent (players [currentPlayerId]);
 					}
 				}
-
-
 			
 			} else {
-				
-				//TODO: Popup for actions: buy property, or send to auction.
+
+                bool buy = true;
+                //TODO: Popup for actions: buy property = true, or send to auction  = false.
+
+                if (buy)
+                {
+                    cPlayer.BuyTile(pTile);
+                } else
+                {
+
+                }
 
 
 			}
@@ -232,6 +273,38 @@ public class Monopoly : MonoBehaviour {
 		}
 
 	}
+
+    public void OpenActions()
+    {
+        bool cont = true;
+        Player cPlayer = players[currentPlayerId];
+        while (cont)
+        {
+            int option = 0;
+
+            switch (option)
+            {
+                case 1:
+                    //Mortgage Option
+                    int indexOfMortgage = 0;
+
+                    //Add property selection screen
+
+                    
+
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    cont = false;
+                    break;
+            }
+        }
+    }
 
 
 

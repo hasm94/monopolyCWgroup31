@@ -60,7 +60,7 @@ public class DiceRoller : MonoBehaviour {
 		//theGameState.currentPhase = Monopoly.TurnPhase.DONE_ROLLING;
 	}
 
-    public int[] getRoll()
+    public int[] GetRoll()
     {
         return dice;
     }

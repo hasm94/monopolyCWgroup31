@@ -45,7 +45,7 @@ public class Purchasable : Tile {
 
 
 
-	public bool hasOwner() {
+	public bool HasOwner() {
 		if (owner != null) {
 			return true;
 		} else {
@@ -121,12 +121,12 @@ public class Purchasable : Tile {
 
     }
 
-    public new bool isPurchasable()
+    public new bool IsPurchasable()
     {
         return true;
     }
 
-    public bool isMortgaged()
+    public bool IsMortgaged()
     {
         return mortgaged;
     }

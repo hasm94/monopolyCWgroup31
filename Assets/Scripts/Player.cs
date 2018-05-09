@@ -29,6 +29,7 @@ public class Player : MonoBehaviour {
 	private List<Purchasable> boughtProperties = new List<Purchasable>();
 	private  int lapsFinished = 0;
     private bool inJail;
+    private int jailFree = 0;
 
 
 	// Use this for initialization
@@ -103,7 +104,58 @@ public class Player : MonoBehaviour {
 		this.isAnimating = true;
 		//theGameState.currentPhase = Monopoly.TurnPhase.ANIMATING;
 	}
-	private void AdvanceMoveQueue()
+
+    public void MakeMoveOutOfJail()
+    {
+        if (isAnimating)
+        {
+            return;
+        }
+
+        //Debug.Log ("Done rolling, waiting for animation = " + theGameState.currentPhase);
+
+        if (theGameState.isDoneRolling == false)
+        {
+            return;
+        }
+
+        //Debug.Log ("isDoneClicking should be false = " + theGameState.isDoneClicking);
+
+        if (theGameState.isDoneClicking == true)
+        {
+            return;
+        }
+
+        int spacesToMove = diceRoller.dice[0] + diceRoller.dice[1];
+
+        if (spacesToMove == 0)
+        {
+            return;
+        }
+
+        moveQueue = new Tile[spacesToMove];
+        Tile finalTile = currentTile;
+
+        for (int i = 0; i < spacesToMove; i++)
+        {
+            currentTile = (currentTile.getNextTile())[0];
+            moveQueue[i] = currentTile;
+        }
+
+        //TODO: Check to see if position hosts an action.
+
+        finalTile = currentTile;
+
+        moveQueueIndex = 0;
+
+        theGameState.isDoneClicking = true;
+        //theGameState.currentPhase = Monopoly.TurnPhase.DONE_CLICKING;
+
+        //Debug.Log ("is Anminating should be false = " + this.isAnimating);
+        this.isAnimating = true;
+        //theGameState.currentPhase = Monopoly.TurnPhase.ANIMATING;
+    }
+    private void AdvanceMoveQueue()
 	{
 		if (moveQueue != null && moveQueueIndex < moveQueue.Length) {
 			Tile nextTile = moveQueue [moveQueueIndex];
@@ -129,88 +181,7 @@ public class Player : MonoBehaviour {
 	public void TileDescription()
 	{
 
-		if (currentTile == theGameState.tiles [1]) {
-			Debug.Log ("You landed on Meditarranean Avenue");
-		} else if (currentTile == theGameState.tiles [2]) {
-			Debug.Log ("You landed on Opportunity Knocks");
-		} else if (currentTile == theGameState.tiles [3]) {
-			Debug.Log ("You landed on Baltic Avenue");
-		} else if (currentTile == theGameState.tiles [4]) {
-			Debug.Log ("You landed on Income tax. Pay 10% or $200");
-		} else if (currentTile == theGameState.tiles [5]) {
-			Debug.Log ("You landed on Reading Railroad");
-		} else if (currentTile == theGameState.tiles [6]) {
-			Debug.Log ("You landed on Oriental Avenue");
-		} else if (currentTile == theGameState.tiles [7]) {
-			Debug.Log ("You landed on Put Luck");
-		} else if (currentTile == theGameState.tiles [8]) {
-			Debug.Log ("You landed on Vermont Avenue");
-		} else if (currentTile == theGameState.tiles [9]) {
-			Debug.Log ("You landed on Connecticut Avenue");
-		} else if (currentTile == theGameState.tiles [10]) {
-			Debug.Log ("You landed on Baltic Avenue");
-		} else if (currentTile == theGameState.tiles [11]) {
-			Debug.Log ("You landed on Just Visiting");
-		} else if (currentTile == theGameState.tiles [12]) {
-			Debug.Log ("You landed on St.Charles Place");
-		} else if (currentTile == theGameState.tiles [13]) {
-			Debug.Log ("You landed on Electric Company");
-		} else if (currentTile == theGameState.tiles [14]) {
-			Debug.Log ("You landed on States Avenue");
-		} else if (currentTile == theGameState.tiles [15]) {
-			Debug.Log ("You landed on Virginia Avenue");
-		} else if (currentTile == theGameState.tiles [16]) {
-			Debug.Log ("You landed on Pennsylvania Railroad");
-		} else if (currentTile == theGameState.tiles [17]) {
-			Debug.Log ("You landed on St.James Place");
-		} else if (currentTile == theGameState.tiles [18]) {
-			Debug.Log ("You landed on Tennessee Avenue");
-		} else if (currentTile == theGameState.tiles [19]) {
-			Debug.Log ("You landed on New York Avenue");
-		} else if (currentTile == theGameState.tiles [20]) {
-			Debug.Log ("You landed on Free Parking");
-		} else if (currentTile == theGameState.tiles [21]) {
-			Debug.Log ("You landed on Kentucky Avenue");
-		} else if (currentTile == theGameState.tiles [22]) {
-			Debug.Log ("You landed on Put Luck");
-		} else if (currentTile == theGameState.tiles [23]) {
-			Debug.Log ("You landed on Indiana Avenue");
-		} else if (currentTile == theGameState.tiles [24]) {
-			Debug.Log ("You landed on Illinois Avenue");
-		} else if (currentTile == theGameState.tiles [25]) {
-			Debug.Log ("You landed on B & O Railroad");
-		} else if (currentTile == theGameState.tiles [26]) {
-			Debug.Log ("You landed on Atlantic Avenue");
-		} else if (currentTile == theGameState.tiles [27]) {
-			Debug.Log ("You landed on Ventor Avenue");
-		} else if (currentTile == theGameState.tiles [28]) {
-			Debug.Log ("You landed on Water Works");
-		} else if (currentTile == theGameState.tiles [29]) {
-			Debug.Log ("You landed on Marvin Gardens");
-		} else if (currentTile == theGameState.tiles [30]) {
-			Debug.Log ("GO TO JAIL!");
-			currentTile = theGameState.tiles [10];
-		} else if (currentTile == theGameState.tiles [31]) {
-			Debug.Log ("You landed on Pacific Avenue");
-		} else if (currentTile == theGameState.tiles [32]) {
-			Debug.Log ("You landed on North Carolina Avenue");
-		} else if (currentTile == theGameState.tiles [33]) {
-			Debug.Log ("You landed on Opportunity Knocks");
-		} else if (currentTile == theGameState.tiles [34]) {
-			Debug.Log ("You landed on Pennsylvania Avenue");
-		} else if (currentTile == theGameState.tiles [35]) {
-			Debug.Log ("You landed on Short Line");
-		} else if (currentTile == theGameState.tiles [36]) {
-			Debug.Log ("You landed on Put Luck");
-		} else if (currentTile == theGameState.tiles [37]) {
-			Debug.Log ("You landed on Park Place");
-		} else if (currentTile == theGameState.tiles [38]) {
-			Debug.Log ("You landed on Luxury Tax");
-		} else if (currentTile == theGameState.tiles [39]) {
-			Debug.Log ("You landed on Broadwalk");
-		} else {
-			Debug.Log ("Tile: GO!");
-		}
+        Debug.Log("Landed on " + currentTile.name);
 
 		//THIS IS TEMPORARY
 //		if (theGameState.isDoneClicking && theGameState.isDoneRolling && theGameState.isDoneAnimating)
@@ -258,6 +229,11 @@ public class Player : MonoBehaviour {
     {
         return currentTile;
     }
+    
+    public int[] GetCurrentRoll()
+    {
+        return diceRoller.GetRoll();
+    }
 
 
 	public void Earns(int bChange){
@@ -296,6 +272,7 @@ public class Player : MonoBehaviour {
     public void GoesToJail()
     {
         inJail = true;
+        currentTile = Monopoly.tiles[10];
     }
 
     public void ReleasedFromJail()
@@ -306,6 +283,67 @@ public class Player : MonoBehaviour {
     public bool IsInJail()
     {
         return inJail;
+    }
+
+    public void GetsJailFree()
+    {
+        jailFree++;
+    }
+
+    public void UsesJailFree()
+    {
+        if (jailFree > 0)
+        {
+            jailFree--;
+            ReleasedFromJail();
+        }
+    }
+
+    public int GetNumberOfHouses()
+    {
+        int count = 0;
+        for (int i = 0; i < boughtProperties.Count; i++)
+        {
+            Purchasable pur = boughtProperties[i];
+            if(pur.GetType() == typeof(Property))
+            {
+                Property prop = (Property)pur;
+                int num = prop.GetNumberOfHouses();
+                if (num != 5)
+                {
+                    count += num;
+                }
+            }
+        }
+        return count;
+    }
+
+    public int GetNumberOfHotels()
+    {
+        int count = 0;
+        for (int i = 0; i < boughtProperties.Count; i++)
+        {
+            Purchasable pur = boughtProperties[i];
+            if (pur.GetType() == typeof(Property))
+            {
+                Property prop = (Property)pur;
+                int num = prop.GetNumberOfHouses();
+                if (num == 5)
+                {
+                    count ++;
+                }
+            }
+        }
+        return count;
+    }
+
+    public void MortgageProperty(int i)
+    {
+        Purchasable purchase = boughtProperties[i];
+        if (purchase.IsMortgaged())
+        {
+
+        }
     }
 
 }

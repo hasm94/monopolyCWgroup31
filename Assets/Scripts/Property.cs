@@ -25,18 +25,22 @@ public class Property : Purchasable {
 
     }
 
-    new public void payRent(Player player){
+    public void PayRent(Player player){
         player.Spends(base.rent[numberOfHouses]);
     }
 
-    public void buildHouse(){
+    public void BuildHouse(){
         numberOfHouses++;
         owner.Spends(street.getHouseCost());
     }
 
-    public void sellHouse(){
+    public void SellHouse(){
         numberOfHouses--;
         owner.Earns(street.getHouseCost());
     }
 
+    public int GetNumberOfHouses()
+    {
+        return numberOfHouses;
+    }
 }

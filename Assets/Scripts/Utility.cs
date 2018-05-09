@@ -21,7 +21,7 @@ public class Utility : Purchasable {
     }
 
     new public void payRent(Player player){
-        int[] cRoll = player.diceRoller.getRoll();
+        int[] cRoll = player.diceRoller.GetRoll();
         int rollSum = cRoll[1] + cRoll[2];
         int ownsNoOfStreet = player.OwnsNoStreet(street);
         int mult = 4;
