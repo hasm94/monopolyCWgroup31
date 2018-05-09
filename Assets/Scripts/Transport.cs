@@ -4,13 +4,26 @@ using System.Collections;
 
 public class Transport : Purchasable {
 
-    int numberOfHouses;
 
+    new void Start()
+    {
 
-    new public void payRent(Player player){
+    }
+
+    void Update()
+    {
+
+    }
+
+    public Transport(String n, int c,int[] r, Street st):base(n, c, st)
+    {
+        rent = r;
+    }
+
+    public void PayRent(Player player){
         
-        int ownsNoOfStreet = player.ownsNoStreet(street);
-        player.spends(rent[ownsNoOfStreet-1]);
+        int ownsNoOfStreet = player.OwnsNoStreet(street);
+        player.Spends(rent[ownsNoOfStreet-1]);
     }
 
 }

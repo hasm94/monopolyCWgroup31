@@ -6,11 +6,10 @@ public class Property : Purchasable {
 
     int numberOfHouses;
 
+
     // Use this for initialization
-    new void Start (String n, Tile[] nt, int c, Street st)
+    new void Start ()
     {
-        base.Start(n, nt, c, st);
-        numberOfHouses = 0;
 	}
 
 	// Update is called once per frame
@@ -18,17 +17,26 @@ public class Property : Purchasable {
 
 	}
 
+    public Property(String n, int c, int[] r, Street st):base(n, c, st)
+    {
+        name = n;
+        rent = r;
+        numberOfHouses = 0;
+
+    }
+
     new public void payRent(Player player){
-        player.spends(base.rent[numberOfHouses]);
+        player.Spends(base.rent[numberOfHouses]);
     }
 
     public void buildHouse(){
         numberOfHouses++;
-        owner.spends(street.getHouseCost());
+        owner.Spends(street.getHouseCost());
     }
 
     public void sellHouse(){
         numberOfHouses--;
-        owner.earns(street.getHouseCost());
+        owner.Earns(street.getHouseCost());
     }
+
 }

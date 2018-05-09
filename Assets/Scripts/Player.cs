@@ -28,6 +28,7 @@ public class Player : MonoBehaviour {
 	private int balance;
 	private List<Purchasable> boughtProperties = new List<Purchasable>();
 	private  int lapsFinished = 0;
+    private bool inJail;
 
 
 	// Use this for initialization
@@ -219,7 +220,7 @@ public class Player : MonoBehaviour {
 //		}
 	}
 
-	public void destroyToken()
+	public void DestroyToken()
 	{
 		Destroy (gameObject);
 	}
@@ -259,11 +260,11 @@ public class Player : MonoBehaviour {
     }
 
 
-	public void earns(int bChange){
+	public void Earns(int bChange){
 		balance += bChange;
 	}
 
-	public void spends(int bChange){
+	public void Spends(int bChange){
 		balance -= bChange;
 	}
 
@@ -272,17 +273,17 @@ public class Player : MonoBehaviour {
         return balance;
     }
 
-	public void buyTile(Purchasable purchase){
+	public void BuyTile(Purchasable purchase){
 		purchase.getsBoughtBy(this);
 		boughtProperties.Add(purchase);
 	}
 
-	public void sellTile(Purchasable sale){
+	public void SellTile(Purchasable sale){
 		sale.sellsProperty();
 		boughtProperties.RemoveAll(z => z == sale);
 	}
 
-	public int ownsNoStreet(Street cStreet){
+	public int OwnsNoStreet(Street cStreet){
 		int count = 0;
 		for(int i = 0; i < boughtProperties.Count; i++){
 			if(boughtProperties[i].getStreet() == cStreet){
@@ -291,6 +292,21 @@ public class Player : MonoBehaviour {
 		}
 		return count;
 	}
+
+    public void GoesToJail()
+    {
+        inJail = true;
+    }
+
+    public void ReleasedFromJail()
+    {
+        inJail = false;
+    }
+
+    public bool IsInJail()
+    {
+        return inJail;
+    }
 
 }
 

@@ -15,12 +15,7 @@ public class Purchasable : Tile {
 
 	// Use this for initialization
 
-	public void Start (String n, Tile[] nt, int c, Street st) {
-
-        base.Start(n, nt);
-		propertyCost = c;
-		owner = null;
-		street = st;
+	new public void Start () {
 
 	}
 
@@ -34,6 +29,22 @@ public class Purchasable : Tile {
 
 	}
 
+    public Purchasable(String n, Tile[] nt, int c, Street st) : base(n, nt)
+    {
+        propertyCost = c;
+        owner = null;
+        street = st;
+    }
+
+    public Purchasable(String n, int c, Street st) : base(n)
+    {
+        propertyCost = c;
+        owner = null;
+        street = st;
+    }
+
+
+
 	public bool hasOwner() {
 		if (owner != null) {
 			return true;
@@ -43,7 +54,7 @@ public class Purchasable : Tile {
 
 	}
 
-    public Player getOwner()
+    public Player GetOwner()
     {
         return owner;
     }
@@ -54,11 +65,11 @@ public class Purchasable : Tile {
 
 		if(player.getBalance() > propertyCost && owner == null){
 
-			player.spends(propertyCost);
+			player.Spends(propertyCost);
 
 			owner = player;
 
-			player.buyTile(this);
+			player.BuyTile(this);
 
 		} else {
 
@@ -72,7 +83,7 @@ public class Purchasable : Tile {
 
 		owner = null;
 
-		owner.earns(propertyCost);
+		owner.Earns(propertyCost);
 
 	}
 
@@ -81,7 +92,7 @@ public class Purchasable : Tile {
 
 	public void mortgageProp(){
 
-		owner.earns(mortgage);
+		owner.Earns(mortgage);
 
 		mortgaged = true;
 
@@ -93,7 +104,7 @@ public class Purchasable : Tile {
 
 	public void payOffMortgage(){
 
-		owner.spends(mortgage);
+		owner.Spends(mortgage);
 
 		mortgaged = false;
 

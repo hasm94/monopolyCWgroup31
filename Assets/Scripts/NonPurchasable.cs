@@ -6,25 +6,26 @@ public class NonPurchasable : Tile {
 
 
 	// Use this for initialization
-	void Start () {
+	new void Start () {
 	
 	}
-
-
-	public void completeAction()
-    {
-
-    }
-
-
-
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
-    public new bool isPurchasable()
+    public NonPurchasable(string n) : base(n)
+    {
+        
+    }
+
+    public void CompleteAction()
+    {
+        Debug.Log("Nothing has happened, there is a mistake in the code that calls nonPurchasable, rather than the subclasses");
+    }
+
+    public bool IsPurchasable()
     {
         return false;
     }

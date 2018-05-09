@@ -9,15 +9,24 @@ public class Tile : MonoBehaviour {
 	private Tile[] nextTile;
 
 	// Use this for initialization
-	public void Start (String n, Tile[] nt) {
-        name = n;
-        nextTile = nt;
+	public void Start () { 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+    public Tile(String n, Tile[] nt)
+    {
+        name = n;
+        nextTile = nt;
+    }
+
+    public Tile(String n)
+    {
+        name = n;
+    }
     
     public String getName(){
         return tileName;
