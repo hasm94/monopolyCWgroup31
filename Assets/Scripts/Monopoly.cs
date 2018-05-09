@@ -276,7 +276,7 @@ public class Monopoly : MonoBehaviour {
 
     public void OpenActions()
     {
-        bool cont = true;
+        bool cont = false ;
         Player cPlayer = players[currentPlayerId];
         while (cont)
         {
