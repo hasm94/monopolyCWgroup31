@@ -17,7 +17,9 @@
         if (plCard == 16)
         {
             plCard = 0;
-        } else {
+        }
+        else
+        {
             plCard++;
         }
     }

@@ -1,42 +1,34 @@
 using UnityEngine;
 using System;
-using System.Collections;
 
-public class Tile : MonoBehaviour {
+public class Tile : MonoBehaviour
+{
 
-    
     private String tileName;
-	private Tile[] nextTile;
-
-	// Use this for initialization
-	public void Start () { 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    private Tile[] nextTile;
 
     public Tile(String n, Tile[] nt)
     {
-        name = n;
+        tileName = n;
         nextTile = nt;
     }
 
     public Tile(String n)
     {
-        name = n;
+        tileName = n;
     }
-    
-    public String getName(){
+
+    public String GetName()
+    {
         return tileName;
     }
-    
-    public Tile[] getNextTile(){
+
+    public Tile[] GetNextTile()
+    {
         return nextTile;
     }
 
-    public bool isPurchasable()
+    public bool IsPurchasable()
     {
         return false;
     }

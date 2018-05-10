@@ -2,32 +2,17 @@
 using System;
 using System.Collections;
 
-public class Purchasable : Tile {
+public class Purchasable : Tile
+{
 
     //Variables applicable to all different properties
 
     protected int propertyCost;
-	protected Player owner;
-	protected int[] rent;
-	protected int mortgage;
+    protected Player owner;
+    protected int[] rent;
+    protected int mortgage;
     protected bool mortgaged;
     protected Street street;
-
-	// Use this for initialization
-
-	new public void Start () {
-
-	}
-
-
-
-	// Update is called once per frame
-
-	void Update () {
-
-
-
-	}
 
     public Purchasable(String n, Tile[] nt, int c, Street st) : base(n, nt)
     {
@@ -43,80 +28,89 @@ public class Purchasable : Tile {
         street = st;
     }
 
+    public bool HasOwner()
+    {
+        if (owner != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
-
-	public bool HasOwner() {
-		if (owner != null) {
-			return true;
-		} else {
-			return false;
-		}
-
-	}
+    }
 
     public Player GetOwner()
     {
         return owner;
     }
 
-	//Is run when a player wants to own a property, checks that the playre has enough on their balance
 
-	public void getsBoughtBy(Player player){
+    public void GetsBoughtBy(Player player)
+    {
 
-		if(player.getBalance() > propertyCost && owner == null){
+        if (player.getBalance() > propertyCost && owner == null)
+        {
 
-			player.Spends(propertyCost);
+            player.Spends(propertyCost);
 
-			owner = player;
+            owner = player;
 
-			player.BuyTile(this);
+            player.BuyTile(this);
 
-		} else {
+        }
+        else
+        {
 
-			Debug.Log("Player doesn't have enough money to buy this property");
+            Debug.Log("Player doesn't have enough money to buy this property");
 
-		}
+        }
 
-	}
+    }
 
-	public void sellsProperty(){
+    public void SellsProperty()
+    {
 
-		owner = null;
+        owner = null;
 
-		owner.Earns(propertyCost);
+        owner.Earns(propertyCost);
 
-	}
-
-
-	//Mortgages the property, adds to the players' balance
-
-	public void mortgageProp(){
-
-		owner.Earns(mortgage);
-
-		mortgaged = true;
-
-	}
+    }
 
 
+    //Mortgages the property, adds to the players' balance
 
-	//Mortgage is returns
+    public void MortgageProp()
+    {
 
-	public void payOffMortgage(){
+        owner.Earns(mortgage);
 
-		owner.Spends(mortgage);
+        mortgaged = true;
 
-		mortgaged = false;
+    }
 
-	}
 
-	public Street getStreet(){
-		return street;
-	}
 
-	//Abstract method to make sure all of the subclasses have a getRent method
+    //Mortgage is returns
 
-	public void payRent(Player player)
+    public void PayOffMortgage()
+    {
+
+        owner.Spends(mortgage);
+
+        mortgaged = false;
+
+    }
+
+    public Street GetStreet()
+    {
+        return street;
+    }
+
+    //Abstract method to make sure all of the subclasses have a getRent method
+
+    public void PayRent(Player player)
     {
 
     }

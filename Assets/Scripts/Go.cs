@@ -1,6 +1,6 @@
 ﻿internal class Go : NonPurchasable
 {
-    public Go(string n): base(n)
+    public Go(string n) : base(n)
     {
     }
 

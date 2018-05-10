@@ -1,23 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NonPurchasable : Tile {
-
-
-
-	// Use this for initialization
-	new void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+public class NonPurchasable : Tile
+{
     public NonPurchasable(string n) : base(n)
     {
-        
+
     }
 
     public void CompleteAction()
@@ -25,7 +13,7 @@ public class NonPurchasable : Tile {
         Debug.Log("Nothing has happened, there is a mistake in the code that calls nonPurchasable, rather than the subclasses");
     }
 
-    public bool IsPurchasable()
+    new public bool IsPurchasable()
     {
         return false;
     }

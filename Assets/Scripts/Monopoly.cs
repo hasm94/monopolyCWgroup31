@@ -3,34 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Monopoly : MonoBehaviour {
+public class Monopoly : MonoBehaviour
+{
 
-	public enum TurnPhase {NEW_TURN,
-		WAITING, DONE_CLICKING, 
-		WAITING_FOR_ROLL, DONE_ROLLING, 
-		WAITING_FOR_ANIMATION, ANIMATING, DONE_ANIMATING
-	};
-	public TurnPhase currentPhase;
+    public enum TurnPhase
+    {
+        NEW_TURN,
+        WAITING, DONE_CLICKING,
+        WAITING_FOR_ROLL, DONE_ROLLING,
+        WAITING_FOR_ANIMATION, ANIMATING, DONE_ANIMATING
+    };
+    public TurnPhase currentPhase;
 
-	public bool isDoneClicking = false;
-	public bool isDoneRolling = false;
-	public bool isDoneAnimating = false;
+    public bool isDoneClicking = false;
+    public bool isDoneRolling = false;
+    public bool isDoneAnimating = false;
 
-	public bool newTurnPossible = true;
+    public bool newTurnPossible = true;
 
-	public int noPlayers;
+    public int noPlayers;
 
-	public static Player[] players;
-	public static Tile[] tiles;
+
+    public static Player[] players;
+    public static Tile[] tiles;
     public Street[] streets;
     public static int freeParkingVal;
-	public int currentPlayerId;
-    
+    public int currentPlayerId;
 
-	public int diceTotal;
 
-	// Use this for initialization
-	void Start () {
+    public int diceTotal;
+
+    // Use this for initialization
+    void Start()
+    {
 
         #region Board Declaration: This is the code section where the board is set up
         tiles = new Tile[40];
@@ -207,29 +212,33 @@ public class Monopoly : MonoBehaviour {
 
         //TODO: Intialise players from menu
         noPlayers = PlayerPrefs.GetInt("noPlayers");
-		for (int i = 5; i >= noPlayers; i--) {
-			Debug.Log(i);
-			players[i].DestroyToken();
-		}
+        for (int i = 5; i >= noPlayers; i--)
+        {
+            Debug.Log(i);
+            players[i].DestroyToken();
+        }
 
-		currentPhase = Monopoly.TurnPhase.NEW_TURN;
-	}
+        currentPhase = Monopoly.TurnPhase.NEW_TURN;
+    }
 
-	public void NewTurn()
-	{
+    public void NewTurn()
+    {
 
-//		
-		if (newTurnPossible) {
-			newTurnPossible = false;
-		} else {
-			Debug.Log ("Wait till turn is over");
-			return;
-		}
-//			currentPhase = Monopoly.TurnPhase.WAITING;
+        //		
+        if (newTurnPossible)
+        {
+            newTurnPossible = false;
+        }
+        else
+        {
+            Debug.Log("Wait till turn is over");
+            return;
+        }
+        //			currentPhase = Monopoly.TurnPhase.WAITING;
 
-			isDoneClicking = false;
-			isDoneRolling = false;
-			isDoneAnimating = false;
+        isDoneClicking = false;
+        isDoneRolling = false;
+        isDoneAnimating = false;
 
         //TODO: advance player via player id
 
@@ -245,7 +254,8 @@ public class Monopoly : MonoBehaviour {
             {
                 Debug.Log("Player got out of Jail");
                 cPlayer.MakeMoveOutOfJail();
-            } else
+            }
+            else
             {
                 int[] second = cPlayer.GetCurrentRoll();
                 if (second[0] == second[1])
@@ -260,14 +270,17 @@ public class Monopoly : MonoBehaviour {
                     {
                         Debug.Log("Player got out of Jail");
                         cPlayer.MakeMoveOutOfJail();
-                    } else
+                    }
+                    else
                     {
                         Debug.Log("Player didn't get out of Jail");
                     }
                 }
             }
-        } else {
-           cPlayer.MakeMove();
+        }
+        else
+        {
+            cPlayer.MakeMove();
         }
 
         PossibleActions();
@@ -284,12 +297,12 @@ public class Monopoly : MonoBehaviour {
         }
         */
 
-        players[currentPlayerId].TileDescription ();
+        players[currentPlayerId].TileDescription();
 
-			currentPlayerId = (currentPlayerId + 1) % noPlayers;
-//		}
+        currentPlayerId = (currentPlayerId + 1) % noPlayers;
+        //		}
 
-	}
+    }
 
 
     public void PossibleActions()
@@ -299,32 +312,43 @@ public class Monopoly : MonoBehaviour {
 
         Tile cTile = players[currentPlayerId].getCurrentTile();
 
-		if (cTile.isPurchasable()) {
+        if (cTile.IsPurchasable())
+        {
             Purchasable pTile = (Purchasable)cTile;
-			Debug.Log ("You have landed on a purchasable tile.");
-			if (pTile.HasOwner ()) {
-				if (pTile.GetOwner () == players [currentPlayerId]) {
-					Debug.Log ("You landed on your own tile. Do nothing.");
-					return;
-				} else {
-					Debug.Log ("You have landed on a tile that is owned by another player.");
+            Debug.Log("You have landed on a purchasable tile.");
+            if (pTile.HasOwner())
+            {
+                if (pTile.GetOwner() == players[currentPlayerId])
+                {
+                    Debug.Log("You landed on your own tile. Do nothing.");
+                    return;
+                }
+                else
+                {
+                    Debug.Log("You have landed on a tile that is owned by another player.");
 
-                    if (pTile.IsMortgaged()) {
+                    if (pTile.IsMortgaged())
+                    {
                         //nothing happens
                         Debug.Log("This tile is mortgaged. Do nothing.");
                         return;
-                    } else if(pTile.GetOwner().IsInJail())
+                    }
+                    else if (pTile.GetOwner().IsInJail())
                     {
                         //nothing happens
                         Debug.Log("The owne is in prison. Do nothing.");
                         return;
-                    } else {
-						Debug.Log ("pay player" + pTile.GetOwner() + " a rent of " + pTile);
-						pTile.payRent (players [currentPlayerId]);
-					}
-				}
-			
-			} else {
+                    }
+                    else
+                    {
+                        Debug.Log("pay player" + pTile.GetOwner() + " a rent of " + pTile);
+                        pTile.PayRent(players[currentPlayerId]);
+                    }
+                }
+
+            }
+            else
+            {
 
                 bool buy = true;
                 Debug.Log("Player can purchase the property");
@@ -334,7 +358,8 @@ public class Monopoly : MonoBehaviour {
                 {
                     cPlayer.BuyTile(pTile);
                     Debug.Log("Property is sold");
-                } else
+                }
+                else
                 {
                     Debug.Log("Property is up for auction");
                     int length = players.Length;
@@ -355,7 +380,8 @@ public class Monopoly : MonoBehaviour {
                     {
                         players[idHighestBid].BuyTile(pTile);
                         Debug.Log("Property sold, at: £" + highestBid);
-                    } else
+                    }
+                    else
                     {
                         Debug.Log("Property not sold, and is till on the market");
                     }
@@ -364,25 +390,27 @@ public class Monopoly : MonoBehaviour {
 
 
             }
-		} else {
+        }
+        else
+        {
 
-			NonPurchasable upTile = (NonPurchasable) cTile;
-			Debug.Log ("You have landed on " + cTile.name + ". Complete given action");
+            NonPurchasable upTile = (NonPurchasable)cTile;
+            Debug.Log("You have landed on " + cTile.name + ". Complete given action");
 
             //TODO show the player what tile they landed on, and the effect
 
-			upTile.CompleteAction();
+            upTile.CompleteAction();
 
 
-		}
+        }
 
-	}
+    }
 
     public void OpenActions()
     {
 
         Debug.Log("Player can complete his business transactions");
-        bool cont = false ;
+        bool cont = false;
 
         Player cPlayer = players[currentPlayerId];
         while (cont)
@@ -428,23 +456,27 @@ public class Monopoly : MonoBehaviour {
 
 
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
 
-		if (isDoneClicking && isDoneRolling && isDoneAnimating)
-		{
-			//Debug.Log("Turn is complete!");
-			newTurnPossible = true;
-			currentPhase = Monopoly.TurnPhase.NEW_TURN;
-		}
-	}
-	
-	public int getStreetId(Colour colour){
-		for(int i = 0; i < streets.Length; i++){
-			if(streets[i].streetColour == colour){
-				return i;
-			}
-		}
-		return -1;
-	}
+        if (isDoneClicking && isDoneRolling && isDoneAnimating)
+        {
+            //Debug.Log("Turn is complete!");
+            newTurnPossible = true;
+            currentPhase = Monopoly.TurnPhase.NEW_TURN;
+        }
+    }
+
+    public int getStreetId(Colour colour)
+    {
+        for (int i = 0; i < streets.Length; i++)
+        {
+            if (streets[i].streetColour == colour)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

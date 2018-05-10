@@ -24,7 +24,7 @@
 
     public void CompleteAction(Player p)
     {
-        switch(type)
+        switch (type)
         {
             case 1:
                 p.Earns(value);
@@ -37,13 +37,13 @@
                 Monopoly.freeParkingVal += value;
                 break;
             case 4:
-                //Make the player move forward
+                // Make the player move forward
                 break;
             case 5:
-                //Make the player move immediately
+                // Make the player move immediately
                 break;
             case 6:
-                //Have option to choose between two actions
+                // Have option to choose between two actions
                 break;
             case 7:
                 for (int i = 0; i < Monopoly.players.Length; i++)

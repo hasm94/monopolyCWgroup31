@@ -2,22 +2,12 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class Property : Purchasable {
+public class Property : Purchasable
+{
 
     int numberOfHouses;
 
-
-    // Use this for initialization
-    new void Start ()
-    {
-	}
-
-	// Update is called once per frame
-	void Update () {
-
-	}
-
-    public Property(String n, int c, int[] r, Street st):base(n, c, st)
+    public Property(String n, int c, int[] r, Street st) : base(n, c, st)
     {
         name = n;
         rent = r;
@@ -25,18 +15,21 @@ public class Property : Purchasable {
 
     }
 
-    public void PayRent(Player player){
+    new public void PayRent(Player player)
+    {
         player.Spends(base.rent[numberOfHouses]);
     }
 
-    public void BuildHouse(){
+    public void BuildHouse()
+    {
         numberOfHouses++;
-        owner.Spends(street.getHouseCost());
+        owner.Spends(street.GetHouseCost());
     }
 
-    public void SellHouse(){
+    public void SellHouse()
+    {
         numberOfHouses--;
-        owner.Earns(street.getHouseCost());
+        owner.Earns(street.GetHouseCost());
     }
 
     public int GetNumberOfHouses()

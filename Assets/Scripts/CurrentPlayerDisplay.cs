@@ -1,19 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class CurrentPlayerDisplay : MonoBehaviour {
+public class CurrentPlayerDisplay : MonoBehaviour
+{
 
 
-	Monopoly theGameState;
-	// Use this for initialization
-	void Start () {
-		theGameState = GameObject.FindObjectOfType<Monopoly> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		GetComponent<Text> ().text = "Player: Player" + (theGameState.currentPlayerId + 1);
-	}
+    Monopoly theGameState;
+    // Use this for initialization
+    void Start()
+    {
+        theGameState = GameObject.FindObjectOfType<Monopoly>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        GetComponent<Text>().text = "Player: Player" + (theGameState.currentPlayerId + 1);
+    }
 }

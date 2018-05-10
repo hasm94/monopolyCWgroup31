@@ -1,34 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 
-public class DiceTotalDisplay : MonoBehaviour {
+public class DiceTotalDisplay : MonoBehaviour
+{
 
-	private Monopoly theGameState;
+    private Monopoly theGameState;
 
-	int rollOver = 0;
-	public bool rollOverFinish = true;
+    int rollOver = 0;
+    public bool rollOverFinish = true;
 
-	// Use this for initialization
-	void Start() 
-	{
-		theGameState = GameObject.FindObjectOfType<Monopoly>();	
-			
-	}
+    // Use this for initialization
+    void Start()
+    {
+        theGameState = GameObject.FindObjectOfType<Monopoly>();
+
+    }
 
 
-	// Update is called once per frame
-	void Update() 
-	{
-		if (theGameState.isDoneRolling == false) {
-			GetComponent<Text> ().text = "?";
-		} else {
-			GetComponent<Text> ().text = "" + theGameState.diceTotal;
-		}
-		
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        if (theGameState.isDoneRolling == false)
+        {
+            GetComponent<Text>().text = "?";
+        }
+        else
+        {
+            GetComponent<Text>().text = "" + theGameState.diceTotal;
+        }
+
+    }
 }
 
 
