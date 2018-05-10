@@ -31,7 +31,8 @@ public class Monopoly : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //Initialise the tiles
+
+        #region Board Declaration: This is the code section where the board is set up
         tiles = new Tile[40];
         streets = new Street[10];
 
@@ -124,9 +125,84 @@ public class Monopoly : MonoBehaviour {
         tiles[37] = new Property("Hawking Way", 350, r21, d_blue);
         tiles[38] = new TaxTile("Super Tax", 100);
         tiles[39] = new Property("Turing Heights", 400, r22, d_blue);
+        #endregion
+
+        #region Card Declaration: Where both of the card piles are made
+
+        Card[] tempPLCardPile = new Card[16];
+        Card[] tempOKCardPile = new Card[16];
 
 
-        
+        Action act = new Action(1, 100);
+        tempPLCardPile[0] = new Card("You inherit £100", act);
+        act = new Action(1, 20);
+        tempPLCardPile[1] = new Card("You have won 2nd prize in a beauty contest, collect £20", act);
+        act = new Action(5, 1);
+        tempPLCardPile[2] = new Card("Go back to Crapper Street", act);
+        act = new Action(1, 20);
+        tempPLCardPile[3] = new Card("Student loan refund. Collect £20", act);
+        act = new Action(1, 200);
+        tempPLCardPile[4] = new Card("Bank error in your favour.Collect £200", act);
+        act = new Action(2, 100);
+        tempPLCardPile[5] = new Card("Pay bill for text books of £100", act);
+        act = new Action(1, 50);
+        tempPLCardPile[6] = new Card("Mega late night taxi bill pay £50", act);
+        act = new Action(4, 0);
+        tempPLCardPile[7] = new Card("Advance to go", act);
+        act = new Action(1, 50);
+        tempPLCardPile[8] = new Card("From sale of Bitcoin you get £50", act);
+        act = new Action(7, 100);
+        tempPLCardPile[9] = new Card("Pay a £10 fine or take opportunity knocks", act);
+        act = new Action(3, 50);
+        tempPLCardPile[10] = new Card("Pay insurance fee of £50", act);
+        act = new Action(1, 100);
+        tempPLCardPile[11] = new Card("Savings bond matures, collect £100", act);
+        act = new Action(8, 0);
+        tempPLCardPile[12] = new Card("Go to jail. Do not pass GO, do not collect £200", act);
+        act = new Action(1, 25);
+        tempPLCardPile[13] = new Card("Received interest on shares of £25", act);
+        act = new Action(7, 10);
+        tempPLCardPile[14] = new Card("It's your birthday. Collect £10 from each player", act);
+        act = new Action(9, 100);
+        tempPLCardPile[15] = new Card("Get out of Jail free", act);
+
+        act = new Action(1, 50);
+        tempOKCardPile[0] = new Card("Bank pays you a dividend ofd £50", act);
+        act = new Action(1, 100);
+        tempOKCardPile[1] = new Card("You won a lip sync battle. Collect £100", act);
+        act = new Action(4, 39);
+        tempOKCardPile[2] = new Card("Advance to Turing Heights", act);
+        act = new Action(4, 24);
+        tempOKCardPile[3] = new Card("Advance to Han Xin Gardens", act);
+        act = new Action(2, 15);
+        tempOKCardPile[4] = new Card("Fined £15 for speeding", act);
+        act = new Action(2, 150);
+        tempOKCardPile[5] = new Card("Pay university fees of £150", act);
+        act = new Action(10, 40, 115);
+        tempOKCardPile[6] = new Card("You are assessed for repairs, £40/house, £115/hotel", act);
+        act = new Action(4, 0);
+        tempOKCardPile[7] = new Card("Advance to Go", act);
+        act = new Action(10, 15, 100);
+        tempOKCardPile[8] = new Card("You are assessed for repairs £25/house, £100/hotel", act);
+        act = new Action(5, 3);
+        tempOKCardPile[9] = new Card("Go back 3 spaces", act);
+        act = new Action(4, 11);
+        tempOKCardPile[10] = new Card("Advance to Skywalker Drive. If you pass Go collect £200", act);
+        act = new Action(8, 0);
+        tempOKCardPile[11] = new Card("Go to Jail. Do not pass Go, do not collect £200", act);
+        act = new Action(2, 20);
+        tempOKCardPile[12] = new Card("Drunk in charge of a skateboard. Fine £20", act);
+        act = new Action(9, 0);
+        tempOKCardPile[13] = new Card("Get out of jail free", act);
+        act = new Action(4, 15);
+        tempOKCardPile[14] = new Card("Take a trip to Hove station. If you pass GO collect £200", act);
+        act = new Action(1, 150);
+        tempOKCardPile[15] = new Card("Loan matures, collect £150", act);
+
+        CardPiles.SetOKCards(tempOKCardPile);
+        CardPiles.SetPLCards(tempPLCardPile);
+
+        #endregion
 
 
         //TODO: Intialise players from menu
@@ -251,22 +327,50 @@ public class Monopoly : MonoBehaviour {
 			} else {
 
                 bool buy = true;
+                Debug.Log("Player can purchase the property");
                 //TODO: Popup for actions: buy property = true, or send to auction  = false.
 
                 if (buy)
                 {
                     cPlayer.BuyTile(pTile);
+                    Debug.Log("Property is sold");
                 } else
                 {
+                    Debug.Log("Property is up for auction");
+                    int length = players.Length;
+                    int[] offers = new int[length];
+
+                    //TODO add menu for auction, everyone can choose a value, then highest is selected, that player buys the house
+
+                    int idHighestBid = -1;
+                    int highestBid = 0;
+                    for (int i = 0; i < length; i++)
+                    {
+                        if (offers[i] > highestBid)
+                        {
+                            idHighestBid = i;
+                        }
+                    }
+                    if (idHighestBid != -1)
+                    {
+                        players[idHighestBid].BuyTile(pTile);
+                        Debug.Log("Property sold, at: £" + highestBid);
+                    } else
+                    {
+                        Debug.Log("Property not sold, and is till on the market");
+                    }
 
                 }
 
 
-			}
+            }
 		} else {
 
 			NonPurchasable upTile = (NonPurchasable) cTile;
 			Debug.Log ("You have landed on " + cTile.name + ". Complete given action");
+
+            //TODO show the player what tile they landed on, and the effect
+
 			upTile.CompleteAction();
 
 
@@ -276,30 +380,45 @@ public class Monopoly : MonoBehaviour {
 
     public void OpenActions()
     {
+
+        Debug.Log("Player can complete his business transactions");
         bool cont = false ;
+
         Player cPlayer = players[currentPlayerId];
         while (cont)
         {
             int option = 0;
 
+            //Add a menu to select different actions
+
             switch (option)
             {
+                case 0:
+                    Debug.Log("Player ended their turn");
+                    break;
                 case 1:
-                    //Mortgage Option
-                    int indexOfMortgage = 0;
-
-                    //Add property selection screen
-
-                    
-
+                    Debug.Log("Player sold property");
+                    //TODO add menu to sell properties
                     break;
                 case 2:
+                    Debug.Log("Player Mortgaged property");
+                    //TODO
                     break;
                 case 3:
+                    Debug.Log("Player Built houses");
+                    //TODO
                     break;
                 case 4:
+                    Debug.Log("Player sold houses");
+                    //TODO
                     break;
                 case 5:
+                    Debug.Log("Viewed Property of other players");
+                    //TODO
+                    break;
+                case 6:
+                    Debug.Log("Player conceded");
+                    //TODO
                     cont = false;
                     break;
             }
