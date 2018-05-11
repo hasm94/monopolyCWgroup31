@@ -1,16 +1,41 @@
-﻿using UnityEngine;
+﻿// ***********************************************************************
+// Assembly         : Assembly-CSharp
+// Author           : User
+// Created          : 05-09-2018
+//
+// Last Modified By : User
+// Last Modified On : 05-10-2018
+// ***********************************************************************
+// <summary>Displays the dice on screen</summary>
+// ***********************************************************************
+using UnityEngine;
 using UnityEngine.UI;
 
 
+/// <summary>
+/// Class DiceTotalDisplay.
+/// </summary>
 public class DiceTotalDisplay : MonoBehaviour
 {
 
+    /// <summary>
+    /// The game state
+    /// </summary>
     private Monopoly theGameState;
 
+    /// <summary>
+    /// The roll over
+    /// </summary>
     int rollOver = 0;
+    /// <summary>
+    /// The roll over finish
+    /// </summary>
     public bool rollOverFinish = true;
 
     // Use this for initialization
+    /// <summary>
+    /// Starts this instance.
+    /// </summary>
     void Start()
     {
         theGameState = GameObject.FindObjectOfType<Monopoly>();
@@ -19,6 +44,9 @@ public class DiceTotalDisplay : MonoBehaviour
 
 
     // Update is called once per frame
+    /// <summary>
+    /// Updates this instance.
+    /// </summary>
     void Update()
     {
         if (theGameState.isDoneRolling == false)

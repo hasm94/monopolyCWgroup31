@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="a264b042-1cfa-4e2b-927f-436cd447b7d4" Title="global Namespace" Url="html/N-global.htm">
+    <HelpTOCNode Id="4d42f773-f359-42b2-ac24-4de936773ab1" Title="Action Class" Url="html/T-global.Action.htm">
+      <HelpTOCNode Title="Action Members" Url="html/AllMembers.T-global.Action.htm" />
+      <HelpTOCNode Id="e430285f-77e6-412a-a7de-566bc94d1202" Title="Action Fields" Url="html/Fields.T-global.Action.htm">
+        <HelpTOCNode Title="type Field" Url="html/F-global.Action.type.htm" />
+        <HelpTOCNode Title="value Field" Url="html/F-global.Action.value.htm" />
+        <HelpTOCNode Title="value2 Field" Url="html/F-global.Action.value2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="53c5374b-e79d-4eca-b13e-b4e2ce9a9a22" Title="Action Methods" Url="html/Methods.T-global.Action.htm">
+        <HelpTOCNode Title="CompleteAction Method " Url="html/M-global.Action.CompleteAction.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="95b153f7-e1d3-4ed4-a667-b6d777f0fe32" Title="Card Class" Url="html/T-global.Card.htm">
+      <HelpTOCNode Title="Card Members" Url="html/AllMembers.T-global.Card.htm" />
+      <HelpTOCNode Title="Card Constructor " Url="html/M-global.Card.-ctor.htm" />
+      <HelpTOCNode Id="1a58c386-77b2-4d61-9180-16f3a23a8b2f" Title="Card Fields" Url="html/Fields.T-global.Card.htm">
+        <HelpTOCNode Title="action Field" Url="html/F-global.Card.action.htm" />
+        <HelpTOCNode Title="text Field" Url="html/F-global.Card.text.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c239fad7-c4be-43c8-82d5-fb8bc55ee29d" Title="Card Methods" Url="html/Methods.T-global.Card.htm">
+        <HelpTOCNode Title="CompleteAction Method " Url="html/M-global.Card.CompleteAction.htm" />
+        <HelpTOCNode Title="getText Method " Url="html/M-global.Card.getText.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="00c736ac-7b94-4fdc-b8d9-81699066823c" Title="CardPiles Class" Url="html/T-global.CardPiles.htm">
+      <HelpTOCNode Title="CardPiles Members" Url="html/AllMembers.T-global.CardPiles.htm" />
+      <HelpTOCNode Title="CardPiles Constructor " Url="html/M-global.CardPiles.-ctor.htm" />
+      <HelpTOCNode Id="0ad468ab-1378-4dfa-b077-bd85ce91bb88" Title="CardPiles Fields" Url="html/Fields.T-global.CardPiles.htm">
+        <HelpTOCNode Title="okCard Field" Url="html/F-global.CardPiles.okCard.htm" />
+        <HelpTOCNode Title="opportunityKnocksPile Field" Url="html/F-global.CardPiles.opportunityKnocksPile.htm" />
+        <HelpTOCNode Title="plCard Field" Url="html/F-global.CardPiles.plCard.htm" />
+        <HelpTOCNode Title="potLuckPile Field" Url="html/F-global.CardPiles.potLuckPile.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7aeb92b4-fd89-434f-9641-e706515097d5" Title="CardPiles Methods" Url="html/Methods.T-global.CardPiles.htm">
+        <HelpTOCNode Title="SetOKCards Method " Url="html/M-global.CardPiles.SetOKCards.htm" />
+        <HelpTOCNode Title="SetPLCards Method " Url="html/M-global.CardPiles.SetPLCards.htm" />
+        <HelpTOCNode Title="TakeOKCard Method " Url="html/M-global.CardPiles.TakeOKCard.htm" />
+        <HelpTOCNode Title="TakePLCard Method " Url="html/M-global.CardPiles.TakePLCard.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="Colour Enumeration" Url="html/T-global.Colour.htm" />
+    <HelpTOCNode Id="4f8f0f32-187f-4f18-9f6c-38cd9f8b5cd2" Title="CurrentPlayerDisplay Class" Url="html/T-global.CurrentPlayerDisplay.htm">
+      <HelpTOCNode Title="CurrentPlayerDisplay Members" Url="html/AllMembers.T-global.CurrentPlayerDisplay.htm" />
+      <HelpTOCNode Id="c63bb8cf-d5e6-4b77-ad64-999b00c380f0" Title="CurrentPlayerDisplay Fields" Url="html/Fields.T-global.CurrentPlayerDisplay.htm">
+        <HelpTOCNode Title="theGameState Field" Url="html/F-global.CurrentPlayerDisplay.theGameState.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6188608c-e65d-4e19-bc00-932a2e0dd34b" Title="CurrentPlayerDisplay Methods" Url="html/Methods.T-global.CurrentPlayerDisplay.htm">
+        <HelpTOCNode Title="Start Method " Url="html/M-global.CurrentPlayerDisplay.Start.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.CurrentPlayerDisplay.Update.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="CurrentPlayerDisplay Properties" Url="html/Properties.T-global.CurrentPlayerDisplay.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="d1acdc8a-5511-40ce-8752-fa37c7a832fa" Title="DiceRoller Class" Url="html/T-global.DiceRoller.htm">
+      <HelpTOCNode Title="DiceRoller Members" Url="html/AllMembers.T-global.DiceRoller.htm" />
+      <HelpTOCNode Id="fc2ec373-5d04-4e24-b7ee-453824010e0e" Title="DiceRoller Fields" Url="html/Fields.T-global.DiceRoller.htm">
+        <HelpTOCNode Title="dice Field" Url="html/F-global.DiceRoller.dice.htm" />
+        <HelpTOCNode Title="diceImage Field" Url="html/F-global.DiceRoller.diceImage.htm" />
+        <HelpTOCNode Title="theGameState Field" Url="html/F-global.DiceRoller.theGameState.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="520305ac-07c2-45cd-9858-0f6252c63b8d" Title="DiceRoller Methods" Url="html/Methods.T-global.DiceRoller.htm">
+        <HelpTOCNode Title="GetRoll Method " Url="html/M-global.DiceRoller.GetRoll.htm" />
+        <HelpTOCNode Title="RollTheDice Method " Url="html/M-global.DiceRoller.RollTheDice.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-global.DiceRoller.Start.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.DiceRoller.Update.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="DiceRoller Properties" Url="html/Properties.T-global.DiceRoller.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="9b436eed-2bbf-4206-a41d-214c3c902677" Title="DiceTotalDisplay Class" Url="html/T-global.DiceTotalDisplay.htm">
+      <HelpTOCNode Title="DiceTotalDisplay Members" Url="html/AllMembers.T-global.DiceTotalDisplay.htm" />
+      <HelpTOCNode Id="26e05a14-23d6-49ab-83dc-56f27ad518da" Title="DiceTotalDisplay Fields" Url="html/Fields.T-global.DiceTotalDisplay.htm">
+        <HelpTOCNode Title="rollOver Field" Url="html/F-global.DiceTotalDisplay.rollOver.htm" />
+        <HelpTOCNode Title="rollOverFinish Field" Url="html/F-global.DiceTotalDisplay.rollOverFinish.htm" />
+        <HelpTOCNode Title="theGameState Field" Url="html/F-global.DiceTotalDisplay.theGameState.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="09b9cef5-a7af-4018-801b-11d1c915cd0e" Title="DiceTotalDisplay Methods" Url="html/Methods.T-global.DiceTotalDisplay.htm">
+        <HelpTOCNode Title="Start Method " Url="html/M-global.DiceTotalDisplay.Start.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.DiceTotalDisplay.Update.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="DiceTotalDisplay Properties" Url="html/Properties.T-global.DiceTotalDisplay.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b68f01bf-e74f-4307-819b-05a1228e62c7" Title="FreeParking Class" Url="html/T-global.FreeParking.htm">
+      <HelpTOCNode Title="FreeParking Members" Url="html/AllMembers.T-global.FreeParking.htm" />
+      <HelpTOCNode Title="FreeParking Constructor " Url="html/M-global.FreeParking.-ctor.htm" />
+      <HelpTOCNode Title="FreeParking Methods" Url="html/Methods.T-global.FreeParking.htm" />
+      <HelpTOCNode Title="FreeParking Properties" Url="html/Properties.T-global.FreeParking.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b86d9d48-4fbd-4fa5-9267-14a786478d72" Title="GameSettings Class" Url="html/T-global.GameSettings.htm">
+      <HelpTOCNode Title="GameSettings Members" Url="html/AllMembers.T-global.GameSettings.htm" />
+      <HelpTOCNode Id="71e446fa-d774-42bf-8e03-a9c8b3e87a18" Title="GameSettings Fields" Url="html/Fields.T-global.GameSettings.htm">
+        <HelpTOCNode Title="noPlayers Field" Url="html/F-global.GameSettings.noPlayers.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ead68658-55b2-47fa-8390-2a0ae169a53b" Title="GameSettings Methods" Url="html/Methods.T-global.GameSettings.htm">
+        <HelpTOCNode Title="Start Method " Url="html/M-global.GameSettings.Start.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.GameSettings.Update.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="GameSettings Properties" Url="html/Properties.T-global.GameSettings.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c59ad332-5f86-4fb2-9776-397731cc8379" Title="LoadScene Class" Url="html/T-global.LoadScene.htm">
+      <HelpTOCNode Title="LoadScene Members" Url="html/AllMembers.T-global.LoadScene.htm" />
+      <HelpTOCNode Id="1af4ca68-91fa-46c1-a2c1-030fdd0c202d" Title="LoadScene Fields" Url="html/Fields.T-global.LoadScene.htm">
+        <HelpTOCNode Title="dropDown Field" Url="html/F-global.LoadScene.dropDown.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b4769974-3403-4598-96d2-b06fdea4fff4" Title="LoadScene Methods" Url="html/Methods.T-global.LoadScene.htm">
+        <HelpTOCNode Title="LoadByIndex Method " Url="html/M-global.LoadScene.LoadByIndex.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-global.LoadScene.Start.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="LoadScene Properties" Url="html/Properties.T-global.LoadScene.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="8f3358be-ac45-417d-8c40-ff9f8e961fa6" Title="Monopoly Class" Url="html/T-global.Monopoly.htm">
+      <HelpTOCNode Title="Monopoly Members" Url="html/AllMembers.T-global.Monopoly.htm" />
+      <HelpTOCNode Id="b3002126-c973-4c21-a90a-4e16b99ad060" Title="Monopoly Fields" Url="html/Fields.T-global.Monopoly.htm">
+        <HelpTOCNode Title="currentPhase Field" Url="html/F-global.Monopoly.currentPhase.htm" />
+        <HelpTOCNode Title="currentPlayerId Field" Url="html/F-global.Monopoly.currentPlayerId.htm" />
+        <HelpTOCNode Title="diceTotal Field" Url="html/F-global.Monopoly.diceTotal.htm" />
+        <HelpTOCNode Title="freeParkingVal Field" Url="html/F-global.Monopoly.freeParkingVal.htm" />
+        <HelpTOCNode Title="isDoneAnimating Field" Url="html/F-global.Monopoly.isDoneAnimating.htm" />
+        <HelpTOCNode Title="isDoneClicking Field" Url="html/F-global.Monopoly.isDoneClicking.htm" />
+        <HelpTOCNode Title="isDoneRolling Field" Url="html/F-global.Monopoly.isDoneRolling.htm" />
+        <HelpTOCNode Title="newTurnPossible Field" Url="html/F-global.Monopoly.newTurnPossible.htm" />
+        <HelpTOCNode Title="noPlayers Field" Url="html/F-global.Monopoly.noPlayers.htm" />
+        <HelpTOCNode Title="players Field" Url="html/F-global.Monopoly.players.htm" />
+        <HelpTOCNode Title="streets Field" Url="html/F-global.Monopoly.streets.htm" />
+        <HelpTOCNode Title="tiles Field" Url="html/F-global.Monopoly.tiles.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6ffb60db-f3b3-454c-92b3-0ecface793b1" Title="Monopoly Methods" Url="html/Methods.T-global.Monopoly.htm">
+        <HelpTOCNode Title="getStreetId Method " Url="html/M-global.Monopoly.getStreetId.htm" />
+        <HelpTOCNode Title="NewTurn Method " Url="html/M-global.Monopoly.NewTurn.htm" />
+        <HelpTOCNode Title="OpenActions Method " Url="html/M-global.Monopoly.OpenActions.htm" />
+        <HelpTOCNode Title="PossibleActions Method " Url="html/M-global.Monopoly.PossibleActions.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-global.Monopoly.Start.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.Monopoly.Update.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Monopoly Properties" Url="html/Properties.T-global.Monopoly.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Title="Monopoly.TurnPhase Enumeration" Url="html/T-global.Monopoly.TurnPhase.htm" />
+    <HelpTOCNode Id="d71d6d45-d756-4ae5-bd26-8019c13eab32" Title="NonPurchasable Class" Url="html/T-global.NonPurchasable.htm">
+      <HelpTOCNode Title="NonPurchasable Members" Url="html/AllMembers.T-global.NonPurchasable.htm" />
+      <HelpTOCNode Title="NonPurchasable Constructor " Url="html/M-global.NonPurchasable.-ctor.htm" />
+      <HelpTOCNode Id="4191403d-5c5a-4312-9593-09635d1ca181" Title="NonPurchasable Methods" Url="html/Methods.T-global.NonPurchasable.htm">
+        <HelpTOCNode Title="CompleteAction Method " Url="html/M-global.NonPurchasable.CompleteAction.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="NonPurchasable Properties" Url="html/Properties.T-global.NonPurchasable.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="ae3c226b-cd79-438f-a1d5-413685d6fde3" Title="Player Class" Url="html/T-global.Player.htm">
+      <HelpTOCNode Title="Player Members" Url="html/AllMembers.T-global.Player.htm" />
+      <HelpTOCNode Id="fbeea39a-ac96-4ce2-a16e-a81a680ba388" Title="Player Fields" Url="html/Fields.T-global.Player.htm">
+        <HelpTOCNode Title="balance Field" Url="html/F-global.Player.balance.htm" />
+        <HelpTOCNode Title="boughtProperties Field" Url="html/F-global.Player.boughtProperties.htm" />
+        <HelpTOCNode Title="currentTile Field" Url="html/F-global.Player.currentTile.htm" />
+        <HelpTOCNode Title="diceRoller Field" Url="html/F-global.Player.diceRoller.htm" />
+        <HelpTOCNode Title="inJail Field" Url="html/F-global.Player.inJail.htm" />
+        <HelpTOCNode Title="isAnimating Field" Url="html/F-global.Player.isAnimating.htm" />
+        <HelpTOCNode Title="jailFree Field" Url="html/F-global.Player.jailFree.htm" />
+        <HelpTOCNode Title="lapsFinished Field" Url="html/F-global.Player.lapsFinished.htm" />
+        <HelpTOCNode Title="moveQueue Field" Url="html/F-global.Player.moveQueue.htm" />
+        <HelpTOCNode Title="moveQueueIndex Field" Url="html/F-global.Player.moveQueueIndex.htm" />
+        <HelpTOCNode Title="smoothDistance Field" Url="html/F-global.Player.smoothDistance.htm" />
+        <HelpTOCNode Title="smoothHeight Field" Url="html/F-global.Player.smoothHeight.htm" />
+        <HelpTOCNode Title="smoothTime Field" Url="html/F-global.Player.smoothTime.htm" />
+        <HelpTOCNode Title="startingTile Field" Url="html/F-global.Player.startingTile.htm" />
+        <HelpTOCNode Title="targetPosition Field" Url="html/F-global.Player.targetPosition.htm" />
+        <HelpTOCNode Title="theGameState Field" Url="html/F-global.Player.theGameState.htm" />
+        <HelpTOCNode Title="velocity Field" Url="html/F-global.Player.velocity.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fc04b241-acb8-416d-9f86-6521bb471666" Title="Player Methods" Url="html/Methods.T-global.Player.htm">
+        <HelpTOCNode Title="AdvanceMoveQueue Method " Url="html/M-global.Player.AdvanceMoveQueue.htm" />
+        <HelpTOCNode Title="BuyTile Method " Url="html/M-global.Player.BuyTile.htm" />
+        <HelpTOCNode Title="DestroyToken Method " Url="html/M-global.Player.DestroyToken.htm" />
+        <HelpTOCNode Title="Earns Method " Url="html/M-global.Player.Earns.htm" />
+        <HelpTOCNode Title="getBalance Method " Url="html/M-global.Player.getBalance.htm" />
+        <HelpTOCNode Title="GetCurrentRoll Method " Url="html/M-global.Player.GetCurrentRoll.htm" />
+        <HelpTOCNode Title="getCurrentTile Method " Url="html/M-global.Player.getCurrentTile.htm" />
+        <HelpTOCNode Title="GetNumberOfHotels Method " Url="html/M-global.Player.GetNumberOfHotels.htm" />
+        <HelpTOCNode Title="GetNumberOfHouses Method " Url="html/M-global.Player.GetNumberOfHouses.htm" />
+        <HelpTOCNode Title="GetsJailFree Method " Url="html/M-global.Player.GetsJailFree.htm" />
+        <HelpTOCNode Title="GoesToJail Method " Url="html/M-global.Player.GoesToJail.htm" />
+        <HelpTOCNode Title="IsInJail Method " Url="html/M-global.Player.IsInJail.htm" />
+        <HelpTOCNode Title="MakeMove Method " Url="html/M-global.Player.MakeMove.htm" />
+        <HelpTOCNode Title="MakeMoveOutOfJail Method " Url="html/M-global.Player.MakeMoveOutOfJail.htm" />
+        <HelpTOCNode Title="MortgageProperty Method " Url="html/M-global.Player.MortgageProperty.htm" />
+        <HelpTOCNode Title="OwnsNoStreet Method " Url="html/M-global.Player.OwnsNoStreet.htm" />
+        <HelpTOCNode Title="ReleasedFromJail Method " Url="html/M-global.Player.ReleasedFromJail.htm" />
+        <HelpTOCNode Title="SellTile Method " Url="html/M-global.Player.SellTile.htm" />
+        <HelpTOCNode Title="SetNewTargetPosition Method " Url="html/M-global.Player.SetNewTargetPosition.htm" />
+        <HelpTOCNode Title="Spends Method " Url="html/M-global.Player.Spends.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-global.Player.Start.htm" />
+        <HelpTOCNode Title="TileDescription Method " Url="html/M-global.Player.TileDescription.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.Player.Update.htm" />
+        <HelpTOCNode Title="UsesJailFree Method " Url="html/M-global.Player.UsesJailFree.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Player Properties" Url="html/Properties.T-global.Player.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="289d368c-4921-420c-b027-240f9d9d6919" Title="Property Class" Url="html/T-global.Property.htm">
+      <HelpTOCNode Title="Property Members" Url="html/AllMembers.T-global.Property.htm" />
+      <HelpTOCNode Title="Property Constructor " Url="html/M-global.Property.-ctor.htm" />
+      <HelpTOCNode Id="5cef4d16-7d6a-4e63-a20a-8419b3354c16" Title="Property Fields" Url="html/Fields.T-global.Property.htm">
+        <HelpTOCNode Title="numberOfHouses Field" Url="html/F-global.Property.numberOfHouses.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4589cae9-c665-45de-bd97-09adef9818c7" Title="Property Methods" Url="html/Methods.T-global.Property.htm">
+        <HelpTOCNode Title="BuildHouse Method " Url="html/M-global.Property.BuildHouse.htm" />
+        <HelpTOCNode Title="GetNumberOfHouses Method " Url="html/M-global.Property.GetNumberOfHouses.htm" />
+        <HelpTOCNode Title="SellHouse Method " Url="html/M-global.Property.SellHouse.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Property Properties" Url="html/Properties.T-global.Property.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="10ab57a6-8cd5-420b-8219-ae6f58c96047" Title="Purchasable Class" Url="html/T-global.Purchasable.htm">
+      <HelpTOCNode Title="Purchasable Members" Url="html/AllMembers.T-global.Purchasable.htm" />
+      <HelpTOCNode Id="c7597402-7604-4dec-94ab-c70855bb013e" Title="Purchasable Fields" Url="html/Fields.T-global.Purchasable.htm">
+        <HelpTOCNode Title="mortgage Field" Url="html/F-global.Purchasable.mortgage.htm" />
+        <HelpTOCNode Title="mortgaged Field" Url="html/F-global.Purchasable.mortgaged.htm" />
+        <HelpTOCNode Title="owner Field" Url="html/F-global.Purchasable.owner.htm" />
+        <HelpTOCNode Title="propertyCost Field" Url="html/F-global.Purchasable.propertyCost.htm" />
+        <HelpTOCNode Title="rent Field" Url="html/F-global.Purchasable.rent.htm" />
+        <HelpTOCNode Title="street Field" Url="html/F-global.Purchasable.street.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8b1b0e36-f90b-4862-a03e-578674ff7031" Title="Purchasable Methods" Url="html/Methods.T-global.Purchasable.htm">
+        <HelpTOCNode Title="GetOwner Method " Url="html/M-global.Purchasable.GetOwner.htm" />
+        <HelpTOCNode Title="GetsBoughtBy Method " Url="html/M-global.Purchasable.GetsBoughtBy.htm" />
+        <HelpTOCNode Title="GetStreet Method " Url="html/M-global.Purchasable.GetStreet.htm" />
+        <HelpTOCNode Title="HasOwner Method " Url="html/M-global.Purchasable.HasOwner.htm" />
+        <HelpTOCNode Title="IsMortgaged Method " Url="html/M-global.Purchasable.IsMortgaged.htm" />
+        <HelpTOCNode Title="MortgageProp Method " Url="html/M-global.Purchasable.MortgageProp.htm" />
+        <HelpTOCNode Title="PayOffMortgage Method " Url="html/M-global.Purchasable.PayOffMortgage.htm" />
+        <HelpTOCNode Title="PayRent Method " Url="html/M-global.Purchasable.PayRent.htm" />
+        <HelpTOCNode Title="SellsProperty Method " Url="html/M-global.Purchasable.SellsProperty.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Purchasable Properties" Url="html/Properties.T-global.Purchasable.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="1b1c436d-a3a1-4bd1-a0e0-80d874e4f44e" Title="Street Class" Url="html/T-global.Street.htm">
+      <HelpTOCNode Title="Street Members" Url="html/AllMembers.T-global.Street.htm" />
+      <HelpTOCNode Id="d72d36be-fbbc-4f37-adea-6bac79720548" Title="Street Fields" Url="html/Fields.T-global.Street.htm">
+        <HelpTOCNode Title="houseCost Field" Url="html/F-global.Street.houseCost.htm" />
+        <HelpTOCNode Title="noOfProperties Field" Url="html/F-global.Street.noOfProperties.htm" />
+        <HelpTOCNode Title="properties Field" Url="html/F-global.Street.properties.htm" />
+        <HelpTOCNode Title="streetColour Field" Url="html/F-global.Street.streetColour.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b892c0be-c563-4e81-9d1f-7fd107dbd32f" Title="Street Methods" Url="html/Methods.T-global.Street.htm">
+        <HelpTOCNode Title="AddProperty Method " Url="html/M-global.Street.AddProperty.htm" />
+        <HelpTOCNode Title="CheckIfOwned Method " Url="html/M-global.Street.CheckIfOwned.htm" />
+        <HelpTOCNode Title="GetColour Method " Url="html/M-global.Street.GetColour.htm" />
+        <HelpTOCNode Title="GetHouseCost Method " Url="html/M-global.Street.GetHouseCost.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d285b175-4464-4353-9a51-45b65b74513a" Title="Tile Class" Url="html/T-global.Tile.htm">
+      <HelpTOCNode Title="Tile Members" Url="html/AllMembers.T-global.Tile.htm" />
+      <HelpTOCNode Id="a4cffbde-d617-44a6-9d7d-04dee92efeb7" Title="Tile Fields" Url="html/Fields.T-global.Tile.htm">
+        <HelpTOCNode Title="nextTile Field" Url="html/F-global.Tile.nextTile.htm" />
+        <HelpTOCNode Title="tileName Field" Url="html/F-global.Tile.tileName.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5d464278-62b5-4a09-a8c2-d8e5896bfcdf" Title="Tile Methods" Url="html/Methods.T-global.Tile.htm">
+        <HelpTOCNode Title="GetName Method " Url="html/M-global.Tile.GetName.htm" />
+        <HelpTOCNode Title="GetNextTile Method " Url="html/M-global.Tile.GetNextTile.htm" />
+        <HelpTOCNode Title="IsPurchasable Method " Url="html/M-global.Tile.IsPurchasable.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Tile Properties" Url="html/Properties.T-global.Tile.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="388105c8-7390-4500-a55f-7e54e513905e" Title="Transport Class" Url="html/T-global.Transport.htm">
+      <HelpTOCNode Title="Transport Members" Url="html/AllMembers.T-global.Transport.htm" />
+      <HelpTOCNode Title="Transport Constructor " Url="html/M-global.Transport.-ctor.htm" />
+      <HelpTOCNode Title="Transport Methods" Url="html/Methods.T-global.Transport.htm" />
+      <HelpTOCNode Title="Transport Properties" Url="html/Properties.T-global.Transport.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="38ba128f-a5bb-4801-bcc0-50479462ae93" Title="Utility Class" Url="html/T-global.Utility.htm">
+      <HelpTOCNode Title="Utility Members" Url="html/AllMembers.T-global.Utility.htm" />
+      <HelpTOCNode Title="Utility Constructor " Url="html/M-global.Utility.-ctor.htm" />
+      <HelpTOCNode Title="Utility Methods" Url="html/Methods.T-global.Utility.htm" />
+      <HelpTOCNode Title="Utility Properties" Url="html/Properties.T-global.Utility.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

@@ -1,36 +1,103 @@
-﻿using System.Collections.Generic;
+﻿// ***********************************************************************
+// Assembly         : Assembly-CSharp
+// Author           : User
+// Created          : 05-09-2018
+//
+// Last Modified By : User
+// Last Modified On : 05-10-2018
+// ***********************************************************************
+// <summary>The player class.</summary>
+// ***********************************************************************
+using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// Class Player.
+/// </summary>
 public class Player : MonoBehaviour
 {
 
+    /// <summary>
+    /// The game state
+    /// </summary>
     private Monopoly theGameState;
+    /// <summary>
+    /// The dice roller
+    /// </summary>
     public DiceRoller diceRoller;
 
+    /// <summary>
+    /// The starting tile
+    /// </summary>
     public Tile startingTile;
+    /// <summary>
+    /// The current tile
+    /// </summary>
     private Tile currentTile;
 
+    /// <summary>
+    /// The target position
+    /// </summary>
     private Vector3 targetPosition;
+    /// <summary>
+    /// The velocity
+    /// </summary>
     private Vector3 velocity;
+    /// <summary>
+    /// The smooth time
+    /// </summary>
     private float smoothTime;
+    /// <summary>
+    /// The smooth distance
+    /// </summary>
     private float smoothDistance;
+    /// <summary>
+    /// The smooth height
+    /// </summary>
     private float smoothHeight;
 
+    /// <summary>
+    /// The move queue
+    /// </summary>
     private Tile[] moveQueue;
+    /// <summary>
+    /// The move queue index
+    /// </summary>
     private int moveQueueIndex;
 
+    /// <summary>
+    /// The is animating
+    /// </summary>
     bool isAnimating = false;
 
     //Game logic variables, related to the abstraction of the game
+    /// <summary>
+    /// The balance
+    /// </summary>
     private int balance;
+    /// <summary>
+    /// The bought properties
+    /// </summary>
     private List<Purchasable> boughtProperties = new List<Purchasable>();
+    /// <summary>
+    /// The laps finished
+    /// </summary>
     private int lapsFinished = 0;
+    /// <summary>
+    /// The in jail
+    /// </summary>
     private bool inJail;
+    /// <summary>
+    /// The number of times the player can get out of jail for free
+    /// </summary>
     private int jailFree = 0;
 
 
     // Use this for initialization
+    /// <summary>
+    /// Starts this instance.
+    /// </summary>
     void Start()
     {
 
@@ -52,6 +119,9 @@ public class Player : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Makes the move for the player.
+    /// </summary>
     public void MakeMove()
     {
         if (isAnimating)
@@ -108,6 +178,9 @@ public class Player : MonoBehaviour
         //theGameState.currentPhase = Monopoly.TurnPhase.ANIMATING;
     }
 
+    /// <summary>
+    /// Makes the move out of jail, if they had to roll to get out.
+    /// </summary>
     public void MakeMoveOutOfJail()
     {
         if (isAnimating)
@@ -158,6 +231,9 @@ public class Player : MonoBehaviour
         this.isAnimating = true;
         //theGameState.currentPhase = Monopoly.TurnPhase.ANIMATING;
     }
+    /// <summary>
+    /// Advances the move queue.
+    /// </summary>
     private void AdvanceMoveQueue()
     {
         if (moveQueue != null && moveQueueIndex < moveQueue.Length)
@@ -176,6 +252,10 @@ public class Player : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Sets the new target position of the player.
+    /// </summary>
+    /// <param name="pos">The position.</param>
     private void SetNewTargetPosition(Vector3 pos)
     {
         targetPosition = pos;
@@ -183,6 +263,9 @@ public class Player : MonoBehaviour
         isAnimating = true;
     }
 
+    /// <summary>
+    /// Describes the tile that the player is currently on.
+    /// </summary>
     public void TileDescription()
     {
 
@@ -196,6 +279,9 @@ public class Player : MonoBehaviour
         //		}
     }
 
+    /// <summary>
+    /// Destroys the token.
+    /// </summary>
     public void DestroyToken()
     {
         Destroy(gameObject);
@@ -205,6 +291,9 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     //TODO: Animated dice display drop along when smoothdamp.y is set to 0 (Contained in second if statement
+    /// <summary>
+    /// Updates this instance.
+    /// </summary>
     void Update()
     {
         if (isAnimating == false)
@@ -238,44 +327,77 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets the current tile that the player is on.
+    /// </summary>
+    /// <returns>Tile.</returns>
     public Tile getCurrentTile()
     {
         return currentTile;
     }
 
+    /// <summary>
+    /// Gets the roll that was just rolled.
+    /// </summary>
+    /// <returns>System.Int32[].</returns>
     public int[] GetCurrentRoll()
     {
         return diceRoller.GetRoll();
     }
 
 
+    /// <summary>
+    /// The player gains this amount of money.
+    /// </summary>
+    /// <param name="bChange">The change in balance.</param>
     public void Earns(int bChange)
     {
         balance += bChange;
     }
 
+    /// <summary>
+    /// The player loses this amount of money.
+    /// </summary>
+    /// <param name="bChange">The negative balance change.</param>
     public void Spends(int bChange)
     {
         balance -= bChange;
     }
 
+    /// <summary>
+    /// Gets the player's current balance.
+    /// </summary>
+    /// <returns>System.Int32.</returns>
     public int getBalance()
     {
         return balance;
     }
 
+    /// <summary>
+    /// Buys the tile the player is currently on.
+    /// </summary>
+    /// <param name="purchase">The purchased tile.</param>
     public void BuyTile(Purchasable purchase)
     {
         purchase.GetsBoughtBy(this);
         boughtProperties.Add(purchase);
     }
 
+    /// <summary>
+    /// Sells a specific tile tile.
+    /// </summary>
+    /// <param name="sale">The sold tile.</param>
     public void SellTile(Purchasable sale)
     {
         sale.SellsProperty();
         boughtProperties.RemoveAll(z => z == sale);
     }
 
+    /// <summary>
+    /// Returns the number of properties the player owns in the street.
+    /// </summary>
+    /// <param name="cStreet">The colour of the street.</param>
+    /// <returns>System.Int32.</returns>
     public int OwnsNoStreet(Street cStreet)
     {
         int count = 0;
@@ -289,27 +411,43 @@ public class Player : MonoBehaviour
         return count;
     }
 
+    /// <summary>
+    /// The player is sent to jail.
+    /// </summary>
     public void GoesToJail()
     {
         inJail = true;
         currentTile = Monopoly.tiles[10];
     }
 
+    /// <summary>
+    /// Released from jail.
+    /// </summary>
     public void ReleasedFromJail()
     {
         inJail = false;
     }
 
+    /// <summary>
+    /// Determines whether the player is in jail.
+    /// </summary>
+    /// <returns><c>true</c> if [is in jail]; otherwise, <c>false</c>.</returns>
     public bool IsInJail()
     {
         return inJail;
     }
 
+    /// <summary>
+    /// Gains an opportunity to get out of the jail for free.
+    /// </summary>
     public void GetsJailFree()
     {
         jailFree++;
     }
 
+    /// <summary>
+    /// Player uses a jail free card.
+    /// </summary>
     public void UsesJailFree()
     {
         if (jailFree > 0)
@@ -319,6 +457,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets the number of houses that the player owns.
+    /// </summary>
+    /// <returns>System.Int32.</returns>
     public int GetNumberOfHouses()
     {
         int count = 0;
@@ -338,6 +480,10 @@ public class Player : MonoBehaviour
         return count;
     }
 
+    /// <summary>
+    /// Gets the number of hotels that the player owns.
+    /// </summary>
+    /// <returns>System.Int32.</returns>
     public int GetNumberOfHotels()
     {
         int count = 0;
@@ -357,6 +503,10 @@ public class Player : MonoBehaviour
         return count;
     }
 
+    /// <summary>
+    /// Mortgages the property specified.
+    /// </summary>
+    /// <param name="i">The property in the player's possession</param>
     public void MortgageProperty(int i)
     {
         Purchasable purchase = boughtProperties[i];

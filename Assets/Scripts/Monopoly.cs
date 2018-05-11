@@ -1,39 +1,103 @@
-using System.Collections;
-using System.Collections.Generic;
+// ***********************************************************************
+// Assembly         : Assembly-CSharp
+// Author           : User
+// Created          : 05-09-2018
+//
+// Last Modified By : User
+// Last Modified On : 05-10-2018
+// ***********************************************************************
+// <summary>Main class that represents the individual games of Property Tycoon that can be played.</summary>
+// ***********************************************************************
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Class Monopoly.
+/// </summary>
 public class Monopoly : MonoBehaviour
 {
 
+    /// <summary>
+    /// Enum TurnPhase.
+    /// </summary>
     public enum TurnPhase
     {
+        /// <summary>
+        /// The new turn
+        /// </summary>
         NEW_TURN,
+        /// <summary>
+        /// The waiting
+        /// </summary>
         WAITING, DONE_CLICKING,
+        /// <summary>
+        /// The waiting for roll
+        /// </summary>
         WAITING_FOR_ROLL, DONE_ROLLING,
+        /// <summary>
+        /// The waiting for animation
+        /// </summary>
         WAITING_FOR_ANIMATION, ANIMATING, DONE_ANIMATING
     };
+    /// <summary>
+    /// The current phase.
+    /// </summary>
     public TurnPhase currentPhase;
 
+    /// <summary>
+    /// The is done clicking
+    /// </summary>
     public bool isDoneClicking = false;
+    /// <summary>
+    /// The is done rolling
+    /// </summary>
     public bool isDoneRolling = false;
+    /// <summary>
+    /// The is done animating
+    /// </summary>
     public bool isDoneAnimating = false;
 
+    /// <summary>
+    /// True if a new turn can be started
+    /// </summary>
     public bool newTurnPossible = true;
 
+    /// <summary>
+    /// The number of players
+    /// </summary>
     public int noPlayers;
 
 
+    /// <summary>
+    /// A list of the players
+    /// </summary>
     public static Player[] players;
+    /// <summary>
+    /// The tiles on board
+    /// </summary>
     public static Tile[] tiles;
+    /// <summary>
+    /// The streets in the game
+    /// </summary>
     public Street[] streets;
+    /// <summary>
+    /// The free parking value, changes according to tax, and relief.
+    /// </summary>
     public static int freeParkingVal;
+    /// <summary>
+    /// The current player identifier
+    /// </summary>
     public int currentPlayerId;
 
 
+    /// <summary>
+    /// The sum of both dice
+    /// </summary>
     public int diceTotal;
 
     // Use this for initialization
+    /// <summary>
+    /// Starts this instance.
+    /// </summary>
     void Start()
     {
 
@@ -221,6 +285,9 @@ public class Monopoly : MonoBehaviour
         currentPhase = Monopoly.TurnPhase.NEW_TURN;
     }
 
+    /// <summary>
+    /// Starts a new turn for the current player
+    /// </summary>
     public void NewTurn()
     {
 
@@ -305,6 +372,9 @@ public class Monopoly : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Shows the possible actions that have to be completed when a player lands on the tile.
+    /// </summary>
     public void PossibleActions()
     {
 
@@ -406,6 +476,9 @@ public class Monopoly : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Opens the actions menus, so that the player can complete their business.
+    /// </summary>
     public void OpenActions()
     {
 
@@ -457,6 +530,9 @@ public class Monopoly : MonoBehaviour
 
 
     // Update is called once per frame
+    /// <summary>
+    /// Updates this instance.
+    /// </summary>
     void Update()
     {
 
@@ -468,6 +544,11 @@ public class Monopoly : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Returns the street identifier, corresponding to the colour.
+    /// </summary>
+    /// <param name="colour">The colour that is meant to be found.</param>
+    /// <returns>System.Int32.</returns>
     public int getStreetId(Colour colour)
     {
         for (int i = 0; i < streets.Length; i++)

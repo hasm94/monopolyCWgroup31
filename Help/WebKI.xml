@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title=".taxAmount field" Url="html/F-global.TaxTile.taxAmount.htm" />
+  <HelpKINode Title="Action class">
+    <HelpKINode Title="Action Class" Url="html/T-global.Action.htm" />
+    <HelpKINode Title="Action Members" Url="html/AllMembers.T-global.Action.htm" />
+    <HelpKINode Title="about Action class" Url="html/T-global.Action.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Action.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Action.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Action.htm" />
+  </HelpKINode>
+  <HelpKINode Title="action field" Url="html/F-global.Card.action.htm" />
+  <HelpKINode Title="Action.CompleteAction method" Url="html/M-global.Action.CompleteAction.htm" />
+  <HelpKINode Title="Action.type field" Url="html/F-global.Action.type.htm" />
+  <HelpKINode Title="Action.value field" Url="html/F-global.Action.value.htm" />
+  <HelpKINode Title="Action.value2 field" Url="html/F-global.Action.value2.htm" />
+  <HelpKINode Title="AddProperty method" Url="html/M-global.Street.AddProperty.htm" />
+  <HelpKINode Title="AdvanceMoveQueue method" Url="html/M-global.Player.AdvanceMoveQueue.htm" />
+  <HelpKINode Title="ANIMATING enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="ANIMATING field" Url="html/F-global.Monopoly.TurnPhase.ANIMATING.htm" />
+  <HelpKINode Title="balance field" Url="html/F-global.Player.balance.htm" />
+  <HelpKINode Title="BLUE enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="BLUE field" Url="html/F-global.Colour.BLUE.htm" />
+  <HelpKINode Title="boughtProperties field" Url="html/F-global.Player.boughtProperties.htm" />
+  <HelpKINode Title="BROWN enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="BROWN field" Url="html/F-global.Colour.BROWN.htm" />
+  <HelpKINode Title="BuildHouse method" Url="html/M-global.Property.BuildHouse.htm" />
+  <HelpKINode Title="BuyTile method" Url="html/M-global.Player.BuyTile.htm" />
+  <HelpKINode Title="Card class">
+    <HelpKINode Title="Card Class" Url="html/T-global.Card.htm" />
+    <HelpKINode Title="Card Members" Url="html/AllMembers.T-global.Card.htm" />
+    <HelpKINode Title="about Card class" Url="html/T-global.Card.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Card.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.Card.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Card.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Card.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Card.action field" Url="html/F-global.Card.action.htm" />
+  <HelpKINode Title="Card.Card constructor" Url="html/M-global.Card.-ctor.htm" />
+  <HelpKINode Title="Card.CompleteAction method" Url="html/M-global.Card.CompleteAction.htm" />
+  <HelpKINode Title="Card.getText method" Url="html/M-global.Card.getText.htm" />
+  <HelpKINode Title="Card.text field" Url="html/F-global.Card.text.htm" />
+  <HelpKINode Title="CardPiles class">
+    <HelpKINode Title="CardPiles Class" Url="html/T-global.CardPiles.htm" />
+    <HelpKINode Title="CardPiles Members" Url="html/AllMembers.T-global.CardPiles.htm" />
+    <HelpKINode Title="about CardPiles class" Url="html/T-global.CardPiles.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.CardPiles.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.CardPiles.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.CardPiles.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.CardPiles.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CardPiles.CardPiles constructor" Url="html/M-global.CardPiles.-ctor.htm" />
+  <HelpKINode Title="CardPiles.okCard field" Url="html/F-global.CardPiles.okCard.htm" />
+  <HelpKINode Title="CardPiles.opportunityKnocksPile field" Url="html/F-global.CardPiles.opportunityKnocksPile.htm" />
+  <HelpKINode Title="CardPiles.plCard field" Url="html/F-global.CardPiles.plCard.htm" />
+  <HelpKINode Title="CardPiles.potLuckPile field" Url="html/F-global.CardPiles.potLuckPile.htm" />
+  <HelpKINode Title="CardPiles.SetOKCards method" Url="html/M-global.CardPiles.SetOKCards.htm" />
+  <HelpKINode Title="CardPiles.SetPLCards method" Url="html/M-global.CardPiles.SetPLCards.htm" />
+  <HelpKINode Title="CardPiles.TakeOKCard method" Url="html/M-global.CardPiles.TakeOKCard.htm" />
+  <HelpKINode Title="CardPiles.TakePLCard method" Url="html/M-global.CardPiles.TakePLCard.htm" />
+  <HelpKINode Title="CheckIfOwned method" Url="html/M-global.Street.CheckIfOwned.htm" />
+  <HelpKINode Title="Colour enumeration" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="Colour.BLUE field" Url="html/F-global.Colour.BLUE.htm" />
+  <HelpKINode Title="Colour.BROWN field" Url="html/F-global.Colour.BROWN.htm" />
+  <HelpKINode Title="Colour.DEEP_BLUE field" Url="html/F-global.Colour.DEEP_BLUE.htm" />
+  <HelpKINode Title="Colour.GREEN field" Url="html/F-global.Colour.GREEN.htm" />
+  <HelpKINode Title="Colour.ORANGE field" Url="html/F-global.Colour.ORANGE.htm" />
+  <HelpKINode Title="Colour.PURPLE field" Url="html/F-global.Colour.PURPLE.htm" />
+  <HelpKINode Title="Colour.RED field" Url="html/F-global.Colour.RED.htm" />
+  <HelpKINode Title="Colour.TRANSPORT field" Url="html/F-global.Colour.TRANSPORT.htm" />
+  <HelpKINode Title="Colour.UTILITY field" Url="html/F-global.Colour.UTILITY.htm" />
+  <HelpKINode Title="Colour.YELLOW field" Url="html/F-global.Colour.YELLOW.htm" />
+  <HelpKINode Title="CompleteAction method">
+    <HelpKINode Title="CompleteAction Method " Url="html/M-global.NonPurchasable.CompleteAction.htm" />
+    <HelpKINode Title="CompleteAction Method " Url="html/M-global.FreeParking.CompleteAction.htm" />
+    <HelpKINode Title="CompleteAction Method " Url="html/M-global.Action.CompleteAction.htm" />
+    <HelpKINode Title="CompleteAction Method " Url="html/M-global.Card.CompleteAction.htm" />
+  </HelpKINode>
+  <HelpKINode Title="currentPhase field" Url="html/F-global.Monopoly.currentPhase.htm" />
+  <HelpKINode Title="CurrentPlayerDisplay class">
+    <HelpKINode Title="CurrentPlayerDisplay Class" Url="html/T-global.CurrentPlayerDisplay.htm" />
+    <HelpKINode Title="CurrentPlayerDisplay Members" Url="html/AllMembers.T-global.CurrentPlayerDisplay.htm" />
+    <HelpKINode Title="about CurrentPlayerDisplay class" Url="html/T-global.CurrentPlayerDisplay.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.CurrentPlayerDisplay.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.CurrentPlayerDisplay.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.CurrentPlayerDisplay.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.CurrentPlayerDisplay.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CurrentPlayerDisplay.Start method" Url="html/M-global.CurrentPlayerDisplay.Start.htm" />
+  <HelpKINode Title="CurrentPlayerDisplay.theGameState field" Url="html/F-global.CurrentPlayerDisplay.theGameState.htm" />
+  <HelpKINode Title="CurrentPlayerDisplay.Update method" Url="html/M-global.CurrentPlayerDisplay.Update.htm" />
+  <HelpKINode Title="currentPlayerId field" Url="html/F-global.Monopoly.currentPlayerId.htm" />
+  <HelpKINode Title="currentTile field" Url="html/F-global.Player.currentTile.htm" />
+  <HelpKINode Title="DEEP_BLUE enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="DEEP_BLUE field" Url="html/F-global.Colour.DEEP_BLUE.htm" />
+  <HelpKINode Title="DestroyToken method" Url="html/M-global.Player.DestroyToken.htm" />
+  <HelpKINode Title="dice field" Url="html/F-global.DiceRoller.dice.htm" />
+  <HelpKINode Title="diceImage field" Url="html/F-global.DiceRoller.diceImage.htm" />
+  <HelpKINode Title="DiceRoller class">
+    <HelpKINode Title="DiceRoller Class" Url="html/T-global.DiceRoller.htm" />
+    <HelpKINode Title="DiceRoller Members" Url="html/AllMembers.T-global.DiceRoller.htm" />
+    <HelpKINode Title="about DiceRoller class" Url="html/T-global.DiceRoller.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.DiceRoller.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.DiceRoller.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.DiceRoller.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.DiceRoller.htm" />
+  </HelpKINode>
+  <HelpKINode Title="diceRoller field" Url="html/F-global.Player.diceRoller.htm" />
+  <HelpKINode Title="DiceRoller.dice field" Url="html/F-global.DiceRoller.dice.htm" />
+  <HelpKINode Title="DiceRoller.diceImage field" Url="html/F-global.DiceRoller.diceImage.htm" />
+  <HelpKINode Title="DiceRoller.GetRoll method" Url="html/M-global.DiceRoller.GetRoll.htm" />
+  <HelpKINode Title="DiceRoller.RollTheDice method" Url="html/M-global.DiceRoller.RollTheDice.htm" />
+  <HelpKINode Title="DiceRoller.Start method" Url="html/M-global.DiceRoller.Start.htm" />
+  <HelpKINode Title="DiceRoller.theGameState field" Url="html/F-global.DiceRoller.theGameState.htm" />
+  <HelpKINode Title="DiceRoller.Update method" Url="html/M-global.DiceRoller.Update.htm" />
+  <HelpKINode Title="diceTotal field" Url="html/F-global.Monopoly.diceTotal.htm" />
+  <HelpKINode Title="DiceTotalDisplay class">
+    <HelpKINode Title="DiceTotalDisplay Class" Url="html/T-global.DiceTotalDisplay.htm" />
+    <HelpKINode Title="DiceTotalDisplay Members" Url="html/AllMembers.T-global.DiceTotalDisplay.htm" />
+    <HelpKINode Title="about DiceTotalDisplay class" Url="html/T-global.DiceTotalDisplay.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.DiceTotalDisplay.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.DiceTotalDisplay.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.DiceTotalDisplay.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.DiceTotalDisplay.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DiceTotalDisplay.rollOver field" Url="html/F-global.DiceTotalDisplay.rollOver.htm" />
+  <HelpKINode Title="DiceTotalDisplay.rollOverFinish field" Url="html/F-global.DiceTotalDisplay.rollOverFinish.htm" />
+  <HelpKINode Title="DiceTotalDisplay.Start method" Url="html/M-global.DiceTotalDisplay.Start.htm" />
+  <HelpKINode Title="DiceTotalDisplay.theGameState field" Url="html/F-global.DiceTotalDisplay.theGameState.htm" />
+  <HelpKINode Title="DiceTotalDisplay.Update method" Url="html/M-global.DiceTotalDisplay.Update.htm" />
+  <HelpKINode Title="DONE_ANIMATING enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="DONE_ANIMATING field" Url="html/F-global.Monopoly.TurnPhase.DONE_ANIMATING.htm" />
+  <HelpKINode Title="DONE_CLICKING enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="DONE_CLICKING field" Url="html/F-global.Monopoly.TurnPhase.DONE_CLICKING.htm" />
+  <HelpKINode Title="DONE_ROLLING enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="DONE_ROLLING field" Url="html/F-global.Monopoly.TurnPhase.DONE_ROLLING.htm" />
+  <HelpKINode Title="dropDown field" Url="html/F-global.LoadScene.dropDown.htm" />
+  <HelpKINode Title="Earns method" Url="html/M-global.Player.Earns.htm" />
+  <HelpKINode Title="FreeParking class">
+    <HelpKINode Title="FreeParking Class" Url="html/T-global.FreeParking.htm" />
+    <HelpKINode Title="FreeParking Members" Url="html/AllMembers.T-global.FreeParking.htm" />
+    <HelpKINode Title="about FreeParking class" Url="html/T-global.FreeParking.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.FreeParking.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.FreeParking.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.FreeParking.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.FreeParking.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FreeParking.CompleteAction method" Url="html/M-global.FreeParking.CompleteAction.htm" />
+  <HelpKINode Title="FreeParking.FreeParking constructor" Url="html/M-global.FreeParking.-ctor.htm" />
+  <HelpKINode Title="freeParkingVal field" Url="html/F-global.Monopoly.freeParkingVal.htm" />
+  <HelpKINode Title="GameSettings class">
+    <HelpKINode Title="GameSettings Class" Url="html/T-global.GameSettings.htm" />
+    <HelpKINode Title="GameSettings Members" Url="html/AllMembers.T-global.GameSettings.htm" />
+    <HelpKINode Title="about GameSettings class" Url="html/T-global.GameSettings.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.GameSettings.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.GameSettings.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.GameSettings.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.GameSettings.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameSettings.noPlayers field" Url="html/F-global.GameSettings.noPlayers.htm" />
+  <HelpKINode Title="GameSettings.Start method" Url="html/M-global.GameSettings.Start.htm" />
+  <HelpKINode Title="GameSettings.Update method" Url="html/M-global.GameSettings.Update.htm" />
+  <HelpKINode Title="getBalance method" Url="html/M-global.Player.getBalance.htm" />
+  <HelpKINode Title="GetColour method" Url="html/M-global.Street.GetColour.htm" />
+  <HelpKINode Title="GetCurrentRoll method" Url="html/M-global.Player.GetCurrentRoll.htm" />
+  <HelpKINode Title="getCurrentTile method" Url="html/M-global.Player.getCurrentTile.htm" />
+  <HelpKINode Title="GetHouseCost method" Url="html/M-global.Street.GetHouseCost.htm" />
+  <HelpKINode Title="GetName method" Url="html/M-global.Tile.GetName.htm" />
+  <HelpKINode Title="GetNextTile method" Url="html/M-global.Tile.GetNextTile.htm" />
+  <HelpKINode Title="GetNumberOfHotels method" Url="html/M-global.Player.GetNumberOfHotels.htm" />
+  <HelpKINode Title="GetNumberOfHouses method">
+    <HelpKINode Title="GetNumberOfHouses Method " Url="html/M-global.Property.GetNumberOfHouses.htm" />
+    <HelpKINode Title="GetNumberOfHouses Method " Url="html/M-global.Player.GetNumberOfHouses.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetOwner method" Url="html/M-global.Purchasable.GetOwner.htm" />
+  <HelpKINode Title="GetRoll method" Url="html/M-global.DiceRoller.GetRoll.htm" />
+  <HelpKINode Title="GetsBoughtBy method" Url="html/M-global.Purchasable.GetsBoughtBy.htm" />
+  <HelpKINode Title="GetsJailFree method" Url="html/M-global.Player.GetsJailFree.htm" />
+  <HelpKINode Title="GetStreet method" Url="html/M-global.Purchasable.GetStreet.htm" />
+  <HelpKINode Title="getStreetId method" Url="html/M-global.Monopoly.getStreetId.htm" />
+  <HelpKINode Title="getText method" Url="html/M-global.Card.getText.htm" />
+  <HelpKINode Title="global namespace" Url="html/N-global.htm" />
+  <HelpKINode Title="global.Action class">
+    <HelpKINode Title="Action Class" Url="html/T-global.Action.htm" />
+    <HelpKINode Title="Action Members" Url="html/AllMembers.T-global.Action.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Card class">
+    <HelpKINode Title="Card Class" Url="html/T-global.Card.htm" />
+    <HelpKINode Title="Card Members" Url="html/AllMembers.T-global.Card.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.CardPiles class">
+    <HelpKINode Title="CardPiles Class" Url="html/T-global.CardPiles.htm" />
+    <HelpKINode Title="CardPiles Members" Url="html/AllMembers.T-global.CardPiles.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Colour enumeration" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="global.CurrentPlayerDisplay class">
+    <HelpKINode Title="CurrentPlayerDisplay Class" Url="html/T-global.CurrentPlayerDisplay.htm" />
+    <HelpKINode Title="CurrentPlayerDisplay Members" Url="html/AllMembers.T-global.CurrentPlayerDisplay.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.DiceRoller class">
+    <HelpKINode Title="DiceRoller Class" Url="html/T-global.DiceRoller.htm" />
+    <HelpKINode Title="DiceRoller Members" Url="html/AllMembers.T-global.DiceRoller.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.DiceTotalDisplay class">
+    <HelpKINode Title="DiceTotalDisplay Class" Url="html/T-global.DiceTotalDisplay.htm" />
+    <HelpKINode Title="DiceTotalDisplay Members" Url="html/AllMembers.T-global.DiceTotalDisplay.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.FreeParking class">
+    <HelpKINode Title="FreeParking Class" Url="html/T-global.FreeParking.htm" />
+    <HelpKINode Title="FreeParking Members" Url="html/AllMembers.T-global.FreeParking.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.GameSettings class">
+    <HelpKINode Title="GameSettings Class" Url="html/T-global.GameSettings.htm" />
+    <HelpKINode Title="GameSettings Members" Url="html/AllMembers.T-global.GameSettings.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.LoadScene class">
+    <HelpKINode Title="LoadScene Class" Url="html/T-global.LoadScene.htm" />
+    <HelpKINode Title="LoadScene Members" Url="html/AllMembers.T-global.LoadScene.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Monopoly class">
+    <HelpKINode Title="Monopoly Class" Url="html/T-global.Monopoly.htm" />
+    <HelpKINode Title="Monopoly Members" Url="html/AllMembers.T-global.Monopoly.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Monopoly.TurnPhase enumeration" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="global.NonPurchasable class">
+    <HelpKINode Title="NonPurchasable Class" Url="html/T-global.NonPurchasable.htm" />
+    <HelpKINode Title="NonPurchasable Members" Url="html/AllMembers.T-global.NonPurchasable.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Player class">
+    <HelpKINode Title="Player Class" Url="html/T-global.Player.htm" />
+    <HelpKINode Title="Player Members" Url="html/AllMembers.T-global.Player.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Property class">
+    <HelpKINode Title="Property Class" Url="html/T-global.Property.htm" />
+    <HelpKINode Title="Property Members" Url="html/AllMembers.T-global.Property.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Purchasable class">
+    <HelpKINode Title="Purchasable Class" Url="html/T-global.Purchasable.htm" />
+    <HelpKINode Title="Purchasable Members" Url="html/AllMembers.T-global.Purchasable.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Street class">
+    <HelpKINode Title="Street Class" Url="html/T-global.Street.htm" />
+    <HelpKINode Title="Street Members" Url="html/AllMembers.T-global.Street.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Tile class">
+    <HelpKINode Title="Tile Class" Url="html/T-global.Tile.htm" />
+    <HelpKINode Title="Tile Members" Url="html/AllMembers.T-global.Tile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Transport class">
+    <HelpKINode Title="Transport Class" Url="html/T-global.Transport.htm" />
+    <HelpKINode Title="Transport Members" Url="html/AllMembers.T-global.Transport.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global.Utility class">
+    <HelpKINode Title="Utility Class" Url="html/T-global.Utility.htm" />
+    <HelpKINode Title="Utility Members" Url="html/AllMembers.T-global.Utility.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GoesToJail method" Url="html/M-global.Player.GoesToJail.htm" />
+  <HelpKINode Title="GREEN enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="GREEN field" Url="html/F-global.Colour.GREEN.htm" />
+  <HelpKINode Title="HasOwner method" Url="html/M-global.Purchasable.HasOwner.htm" />
+  <HelpKINode Title="houseCost field" Url="html/F-global.Street.houseCost.htm" />
+  <HelpKINode Title="inJail field" Url="html/F-global.Player.inJail.htm" />
+  <HelpKINode Title="isAnimating field" Url="html/F-global.Player.isAnimating.htm" />
+  <HelpKINode Title="isDoneAnimating field" Url="html/F-global.Monopoly.isDoneAnimating.htm" />
+  <HelpKINode Title="isDoneClicking field" Url="html/F-global.Monopoly.isDoneClicking.htm" />
+  <HelpKINode Title="isDoneRolling field" Url="html/F-global.Monopoly.isDoneRolling.htm" />
+  <HelpKINode Title="IsInJail method" Url="html/M-global.Player.IsInJail.htm" />
+  <HelpKINode Title="IsMortgaged method" Url="html/M-global.Purchasable.IsMortgaged.htm" />
+  <HelpKINode Title="IsPurchasable method">
+    <HelpKINode Title="IsPurchasable Method " Url="html/M-global.NonPurchasable.IsPurchasable.htm" />
+    <HelpKINode Title="IsPurchasable Method " Url="html/M-global.Purchasable.IsPurchasable.htm" />
+    <HelpKINode Title="IsPurchasable Method " Url="html/M-global.Tile.IsPurchasable.htm" />
+  </HelpKINode>
+  <HelpKINode Title="jailFree field" Url="html/F-global.Player.jailFree.htm" />
+  <HelpKINode Title="lapsFinished field" Url="html/F-global.Player.lapsFinished.htm" />
+  <HelpKINode Title="LoadByIndex method" Url="html/M-global.LoadScene.LoadByIndex.htm" />
+  <HelpKINode Title="LoadScene class">
+    <HelpKINode Title="LoadScene Class" Url="html/T-global.LoadScene.htm" />
+    <HelpKINode Title="LoadScene Members" Url="html/AllMembers.T-global.LoadScene.htm" />
+    <HelpKINode Title="about LoadScene class" Url="html/T-global.LoadScene.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.LoadScene.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.LoadScene.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.LoadScene.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.LoadScene.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoadScene.dropDown field" Url="html/F-global.LoadScene.dropDown.htm" />
+  <HelpKINode Title="LoadScene.LoadByIndex method" Url="html/M-global.LoadScene.LoadByIndex.htm" />
+  <HelpKINode Title="LoadScene.Start method" Url="html/M-global.LoadScene.Start.htm" />
+  <HelpKINode Title="MakeMove method" Url="html/M-global.Player.MakeMove.htm" />
+  <HelpKINode Title="MakeMoveOutOfJail method" Url="html/M-global.Player.MakeMoveOutOfJail.htm" />
+  <HelpKINode Title="Monopoly class">
+    <HelpKINode Title="Monopoly Class" Url="html/T-global.Monopoly.htm" />
+    <HelpKINode Title="Monopoly Members" Url="html/AllMembers.T-global.Monopoly.htm" />
+    <HelpKINode Title="about Monopoly class" Url="html/T-global.Monopoly.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Monopoly.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Monopoly.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Monopoly.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.Monopoly.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Monopoly.currentPhase field" Url="html/F-global.Monopoly.currentPhase.htm" />
+  <HelpKINode Title="Monopoly.currentPlayerId field" Url="html/F-global.Monopoly.currentPlayerId.htm" />
+  <HelpKINode Title="Monopoly.diceTotal field" Url="html/F-global.Monopoly.diceTotal.htm" />
+  <HelpKINode Title="Monopoly.freeParkingVal field" Url="html/F-global.Monopoly.freeParkingVal.htm" />
+  <HelpKINode Title="Monopoly.getStreetId method" Url="html/M-global.Monopoly.getStreetId.htm" />
+  <HelpKINode Title="Monopoly.isDoneAnimating field" Url="html/F-global.Monopoly.isDoneAnimating.htm" />
+  <HelpKINode Title="Monopoly.isDoneClicking field" Url="html/F-global.Monopoly.isDoneClicking.htm" />
+  <HelpKINode Title="Monopoly.isDoneRolling field" Url="html/F-global.Monopoly.isDoneRolling.htm" />
+  <HelpKINode Title="Monopoly.NewTurn method" Url="html/M-global.Monopoly.NewTurn.htm" />
+  <HelpKINode Title="Monopoly.newTurnPossible field" Url="html/F-global.Monopoly.newTurnPossible.htm" />
+  <HelpKINode Title="Monopoly.noPlayers field" Url="html/F-global.Monopoly.noPlayers.htm" />
+  <HelpKINode Title="Monopoly.OpenActions method" Url="html/M-global.Monopoly.OpenActions.htm" />
+  <HelpKINode Title="Monopoly.players field" Url="html/F-global.Monopoly.players.htm" />
+  <HelpKINode Title="Monopoly.PossibleActions method" Url="html/M-global.Monopoly.PossibleActions.htm" />
+  <HelpKINode Title="Monopoly.Start method" Url="html/M-global.Monopoly.Start.htm" />
+  <HelpKINode Title="Monopoly.streets field" Url="html/F-global.Monopoly.streets.htm" />
+  <HelpKINode Title="Monopoly.tiles field" Url="html/F-global.Monopoly.tiles.htm" />
+  <HelpKINode Title="Monopoly.TurnPhase enumeration" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="Monopoly.Update method" Url="html/M-global.Monopoly.Update.htm" />
+  <HelpKINode Title="mortgage field" Url="html/F-global.Purchasable.mortgage.htm" />
+  <HelpKINode Title="mortgaged field" Url="html/F-global.Purchasable.mortgaged.htm" />
+  <HelpKINode Title="MortgageProp method" Url="html/M-global.Purchasable.MortgageProp.htm" />
+  <HelpKINode Title="MortgageProperty method" Url="html/M-global.Player.MortgageProperty.htm" />
+  <HelpKINode Title="moveQueue field" Url="html/F-global.Player.moveQueue.htm" />
+  <HelpKINode Title="moveQueueIndex field" Url="html/F-global.Player.moveQueueIndex.htm" />
+  <HelpKINode Title="NewTurn method" Url="html/M-global.Monopoly.NewTurn.htm" />
+  <HelpKINode Title="newTurnPossible field" Url="html/F-global.Monopoly.newTurnPossible.htm" />
+  <HelpKINode Title="NEW_TURN enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="NEW_TURN field" Url="html/F-global.Monopoly.TurnPhase.NEW_TURN.htm" />
+  <HelpKINode Title="nextTile field" Url="html/F-global.Tile.nextTile.htm" />
+  <HelpKINode Title="NonPurchasable class">
+    <HelpKINode Title="NonPurchasable Class" Url="html/T-global.NonPurchasable.htm" />
+    <HelpKINode Title="NonPurchasable Members" Url="html/AllMembers.T-global.NonPurchasable.htm" />
+    <HelpKINode Title="about NonPurchasable class" Url="html/T-global.NonPurchasable.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.NonPurchasable.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.NonPurchasable.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.NonPurchasable.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.NonPurchasable.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NonPurchasable.CompleteAction method" Url="html/M-global.NonPurchasable.CompleteAction.htm" />
+  <HelpKINode Title="NonPurchasable.IsPurchasable method" Url="html/M-global.NonPurchasable.IsPurchasable.htm" />
+  <HelpKINode Title="NonPurchasable.NonPurchasable constructor" Url="html/M-global.NonPurchasable.-ctor.htm" />
+  <HelpKINode Title="noOfProperties field" Url="html/F-global.Street.noOfProperties.htm" />
+  <HelpKINode Title="noPlayers field">
+    <HelpKINode Title="noPlayers Field" Url="html/F-global.Monopoly.noPlayers.htm" />
+    <HelpKINode Title="noPlayers Field" Url="html/F-global.GameSettings.noPlayers.htm" />
+  </HelpKINode>
+  <HelpKINode Title="numberOfHouses field" Url="html/F-global.Property.numberOfHouses.htm" />
+  <HelpKINode Title="okCard field" Url="html/F-global.CardPiles.okCard.htm" />
+  <HelpKINode Title="OpenActions method" Url="html/M-global.Monopoly.OpenActions.htm" />
+  <HelpKINode Title="opportunityKnocksPile field" Url="html/F-global.CardPiles.opportunityKnocksPile.htm" />
+  <HelpKINode Title="ORANGE enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="ORANGE field" Url="html/F-global.Colour.ORANGE.htm" />
+  <HelpKINode Title="owner field" Url="html/F-global.Purchasable.owner.htm" />
+  <HelpKINode Title="OwnsNoStreet method" Url="html/M-global.Player.OwnsNoStreet.htm" />
+  <HelpKINode Title="PayOffMortgage method" Url="html/M-global.Purchasable.PayOffMortgage.htm" />
+  <HelpKINode Title="PayRent method">
+    <HelpKINode Title="PayRent Method " Url="html/M-global.Purchasable.PayRent.htm" />
+    <HelpKINode Title="PayRent Method " Url="html/M-global.Property.PayRent.htm" />
+    <HelpKINode Title="PayRent Method " Url="html/M-global.Utility.PayRent.htm" />
+    <HelpKINode Title="PayRent Method " Url="html/M-global.Transport.PayRent.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Player class">
+    <HelpKINode Title="Player Class" Url="html/T-global.Player.htm" />
+    <HelpKINode Title="Player Members" Url="html/AllMembers.T-global.Player.htm" />
+    <HelpKINode Title="about Player class" Url="html/T-global.Player.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Player.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Player.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Player.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.Player.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Player.AdvanceMoveQueue method" Url="html/M-global.Player.AdvanceMoveQueue.htm" />
+  <HelpKINode Title="Player.balance field" Url="html/F-global.Player.balance.htm" />
+  <HelpKINode Title="Player.boughtProperties field" Url="html/F-global.Player.boughtProperties.htm" />
+  <HelpKINode Title="Player.BuyTile method" Url="html/M-global.Player.BuyTile.htm" />
+  <HelpKINode Title="Player.currentTile field" Url="html/F-global.Player.currentTile.htm" />
+  <HelpKINode Title="Player.DestroyToken method" Url="html/M-global.Player.DestroyToken.htm" />
+  <HelpKINode Title="Player.diceRoller field" Url="html/F-global.Player.diceRoller.htm" />
+  <HelpKINode Title="Player.Earns method" Url="html/M-global.Player.Earns.htm" />
+  <HelpKINode Title="Player.getBalance method" Url="html/M-global.Player.getBalance.htm" />
+  <HelpKINode Title="Player.GetCurrentRoll method" Url="html/M-global.Player.GetCurrentRoll.htm" />
+  <HelpKINode Title="Player.getCurrentTile method" Url="html/M-global.Player.getCurrentTile.htm" />
+  <HelpKINode Title="Player.GetNumberOfHotels method" Url="html/M-global.Player.GetNumberOfHotels.htm" />
+  <HelpKINode Title="Player.GetNumberOfHouses method" Url="html/M-global.Player.GetNumberOfHouses.htm" />
+  <HelpKINode Title="Player.GetsJailFree method" Url="html/M-global.Player.GetsJailFree.htm" />
+  <HelpKINode Title="Player.GoesToJail method" Url="html/M-global.Player.GoesToJail.htm" />
+  <HelpKINode Title="Player.inJail field" Url="html/F-global.Player.inJail.htm" />
+  <HelpKINode Title="Player.isAnimating field" Url="html/F-global.Player.isAnimating.htm" />
+  <HelpKINode Title="Player.IsInJail method" Url="html/M-global.Player.IsInJail.htm" />
+  <HelpKINode Title="Player.jailFree field" Url="html/F-global.Player.jailFree.htm" />
+  <HelpKINode Title="Player.lapsFinished field" Url="html/F-global.Player.lapsFinished.htm" />
+  <HelpKINode Title="Player.MakeMove method" Url="html/M-global.Player.MakeMove.htm" />
+  <HelpKINode Title="Player.MakeMoveOutOfJail method" Url="html/M-global.Player.MakeMoveOutOfJail.htm" />
+  <HelpKINode Title="Player.MortgageProperty method" Url="html/M-global.Player.MortgageProperty.htm" />
+  <HelpKINode Title="Player.moveQueue field" Url="html/F-global.Player.moveQueue.htm" />
+  <HelpKINode Title="Player.moveQueueIndex field" Url="html/F-global.Player.moveQueueIndex.htm" />
+  <HelpKINode Title="Player.OwnsNoStreet method" Url="html/M-global.Player.OwnsNoStreet.htm" />
+  <HelpKINode Title="Player.ReleasedFromJail method" Url="html/M-global.Player.ReleasedFromJail.htm" />
+  <HelpKINode Title="Player.SellTile method" Url="html/M-global.Player.SellTile.htm" />
+  <HelpKINode Title="Player.SetNewTargetPosition method" Url="html/M-global.Player.SetNewTargetPosition.htm" />
+  <HelpKINode Title="Player.smoothDistance field" Url="html/F-global.Player.smoothDistance.htm" />
+  <HelpKINode Title="Player.smoothHeight field" Url="html/F-global.Player.smoothHeight.htm" />
+  <HelpKINode Title="Player.smoothTime field" Url="html/F-global.Player.smoothTime.htm" />
+  <HelpKINode Title="Player.Spends method" Url="html/M-global.Player.Spends.htm" />
+  <HelpKINode Title="Player.Start method" Url="html/M-global.Player.Start.htm" />
+  <HelpKINode Title="Player.startingTile field" Url="html/F-global.Player.startingTile.htm" />
+  <HelpKINode Title="Player.targetPosition field" Url="html/F-global.Player.targetPosition.htm" />
+  <HelpKINode Title="Player.theGameState field" Url="html/F-global.Player.theGameState.htm" />
+  <HelpKINode Title="Player.TileDescription method" Url="html/M-global.Player.TileDescription.htm" />
+  <HelpKINode Title="Player.Update method" Url="html/M-global.Player.Update.htm" />
+  <HelpKINode Title="Player.UsesJailFree method" Url="html/M-global.Player.UsesJailFree.htm" />
+  <HelpKINode Title="Player.velocity field" Url="html/F-global.Player.velocity.htm" />
+  <HelpKINode Title="players field" Url="html/F-global.Monopoly.players.htm" />
+  <HelpKINode Title="plCard field" Url="html/F-global.CardPiles.plCard.htm" />
+  <HelpKINode Title="PossibleActions method" Url="html/M-global.Monopoly.PossibleActions.htm" />
+  <HelpKINode Title="potLuckPile field" Url="html/F-global.CardPiles.potLuckPile.htm" />
+  <HelpKINode Title="properties field" Url="html/F-global.Street.properties.htm" />
+  <HelpKINode Title="Property class">
+    <HelpKINode Title="Property Class" Url="html/T-global.Property.htm" />
+    <HelpKINode Title="Property Members" Url="html/AllMembers.T-global.Property.htm" />
+    <HelpKINode Title="about Property class" Url="html/T-global.Property.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Property.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.Property.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Property.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Property.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.Property.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Property.BuildHouse method" Url="html/M-global.Property.BuildHouse.htm" />
+  <HelpKINode Title="Property.GetNumberOfHouses method" Url="html/M-global.Property.GetNumberOfHouses.htm" />
+  <HelpKINode Title="Property.numberOfHouses field" Url="html/F-global.Property.numberOfHouses.htm" />
+  <HelpKINode Title="Property.PayRent method" Url="html/M-global.Property.PayRent.htm" />
+  <HelpKINode Title="Property.Property constructor" Url="html/M-global.Property.-ctor.htm" />
+  <HelpKINode Title="Property.SellHouse method" Url="html/M-global.Property.SellHouse.htm" />
+  <HelpKINode Title="propertyCost field" Url="html/F-global.Purchasable.propertyCost.htm" />
+  <HelpKINode Title="Purchasable class">
+    <HelpKINode Title="Purchasable Class" Url="html/T-global.Purchasable.htm" />
+    <HelpKINode Title="Purchasable Members" Url="html/AllMembers.T-global.Purchasable.htm" />
+    <HelpKINode Title="about Purchasable class" Url="html/T-global.Purchasable.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Purchasable.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Purchasable.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Purchasable.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.Purchasable.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Purchasable.GetOwner method" Url="html/M-global.Purchasable.GetOwner.htm" />
+  <HelpKINode Title="Purchasable.GetsBoughtBy method" Url="html/M-global.Purchasable.GetsBoughtBy.htm" />
+  <HelpKINode Title="Purchasable.GetStreet method" Url="html/M-global.Purchasable.GetStreet.htm" />
+  <HelpKINode Title="Purchasable.HasOwner method" Url="html/M-global.Purchasable.HasOwner.htm" />
+  <HelpKINode Title="Purchasable.IsMortgaged method" Url="html/M-global.Purchasable.IsMortgaged.htm" />
+  <HelpKINode Title="Purchasable.IsPurchasable method" Url="html/M-global.Purchasable.IsPurchasable.htm" />
+  <HelpKINode Title="Purchasable.mortgage field" Url="html/F-global.Purchasable.mortgage.htm" />
+  <HelpKINode Title="Purchasable.mortgaged field" Url="html/F-global.Purchasable.mortgaged.htm" />
+  <HelpKINode Title="Purchasable.MortgageProp method" Url="html/M-global.Purchasable.MortgageProp.htm" />
+  <HelpKINode Title="Purchasable.owner field" Url="html/F-global.Purchasable.owner.htm" />
+  <HelpKINode Title="Purchasable.PayOffMortgage method" Url="html/M-global.Purchasable.PayOffMortgage.htm" />
+  <HelpKINode Title="Purchasable.PayRent method" Url="html/M-global.Purchasable.PayRent.htm" />
+  <HelpKINode Title="Purchasable.propertyCost field" Url="html/F-global.Purchasable.propertyCost.htm" />
+  <HelpKINode Title="Purchasable.rent field" Url="html/F-global.Purchasable.rent.htm" />
+  <HelpKINode Title="Purchasable.SellsProperty method" Url="html/M-global.Purchasable.SellsProperty.htm" />
+  <HelpKINode Title="Purchasable.street field" Url="html/F-global.Purchasable.street.htm" />
+  <HelpKINode Title="PURPLE enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="PURPLE field" Url="html/F-global.Colour.PURPLE.htm" />
+  <HelpKINode Title="RED enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="RED field" Url="html/F-global.Colour.RED.htm" />
+  <HelpKINode Title="ReleasedFromJail method" Url="html/M-global.Player.ReleasedFromJail.htm" />
+  <HelpKINode Title="rent field" Url="html/F-global.Purchasable.rent.htm" />
+  <HelpKINode Title="rollOver field" Url="html/F-global.DiceTotalDisplay.rollOver.htm" />
+  <HelpKINode Title="rollOverFinish field" Url="html/F-global.DiceTotalDisplay.rollOverFinish.htm" />
+  <HelpKINode Title="RollTheDice method" Url="html/M-global.DiceRoller.RollTheDice.htm" />
+  <HelpKINode Title="SellHouse method" Url="html/M-global.Property.SellHouse.htm" />
+  <HelpKINode Title="SellsProperty method" Url="html/M-global.Purchasable.SellsProperty.htm" />
+  <HelpKINode Title="SellTile method" Url="html/M-global.Player.SellTile.htm" />
+  <HelpKINode Title="SetNewTargetPosition method" Url="html/M-global.Player.SetNewTargetPosition.htm" />
+  <HelpKINode Title="SetOKCards method" Url="html/M-global.CardPiles.SetOKCards.htm" />
+  <HelpKINode Title="SetPLCards method" Url="html/M-global.CardPiles.SetPLCards.htm" />
+  <HelpKINode Title="smoothDistance field" Url="html/F-global.Player.smoothDistance.htm" />
+  <HelpKINode Title="smoothHeight field" Url="html/F-global.Player.smoothHeight.htm" />
+  <HelpKINode Title="smoothTime field" Url="html/F-global.Player.smoothTime.htm" />
+  <HelpKINode Title="Spends method" Url="html/M-global.Player.Spends.htm" />
+  <HelpKINode Title="Start method">
+    <HelpKINode Title="Start Method " Url="html/M-global.DiceTotalDisplay.Start.htm" />
+    <HelpKINode Title="Start Method " Url="html/M-global.LoadScene.Start.htm" />
+    <HelpKINode Title="Start Method " Url="html/M-global.DiceRoller.Start.htm" />
+    <HelpKINode Title="Start Method " Url="html/M-global.CurrentPlayerDisplay.Start.htm" />
+    <HelpKINode Title="Start Method " Url="html/M-global.Player.Start.htm" />
+    <HelpKINode Title="Start Method " Url="html/M-global.Monopoly.Start.htm" />
+    <HelpKINode Title="Start Method " Url="html/M-global.GameSettings.Start.htm" />
+  </HelpKINode>
+  <HelpKINode Title="startingTile field" Url="html/F-global.Player.startingTile.htm" />
+  <HelpKINode Title="Street class">
+    <HelpKINode Title="Street Class" Url="html/T-global.Street.htm" />
+    <HelpKINode Title="Street Members" Url="html/AllMembers.T-global.Street.htm" />
+    <HelpKINode Title="about Street class" Url="html/T-global.Street.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Street.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Street.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Street.htm" />
+  </HelpKINode>
+  <HelpKINode Title="street field" Url="html/F-global.Purchasable.street.htm" />
+  <HelpKINode Title="Street.AddProperty method" Url="html/M-global.Street.AddProperty.htm" />
+  <HelpKINode Title="Street.CheckIfOwned method" Url="html/M-global.Street.CheckIfOwned.htm" />
+  <HelpKINode Title="Street.GetColour method" Url="html/M-global.Street.GetColour.htm" />
+  <HelpKINode Title="Street.GetHouseCost method" Url="html/M-global.Street.GetHouseCost.htm" />
+  <HelpKINode Title="Street.houseCost field" Url="html/F-global.Street.houseCost.htm" />
+  <HelpKINode Title="Street.noOfProperties field" Url="html/F-global.Street.noOfProperties.htm" />
+  <HelpKINode Title="Street.properties field" Url="html/F-global.Street.properties.htm" />
+  <HelpKINode Title="Street.streetColour field" Url="html/F-global.Street.streetColour.htm" />
+  <HelpKINode Title="streetColour field" Url="html/F-global.Street.streetColour.htm" />
+  <HelpKINode Title="streets field" Url="html/F-global.Monopoly.streets.htm" />
+  <HelpKINode Title="TakeOKCard method" Url="html/M-global.CardPiles.TakeOKCard.htm" />
+  <HelpKINode Title="TakePLCard method" Url="html/M-global.CardPiles.TakePLCard.htm" />
+  <HelpKINode Title="targetPosition field" Url="html/F-global.Player.targetPosition.htm" />
+  <HelpKINode Title="taxAmount field" Url="html/F-global.TaxTile.taxAmount.htm" />
+  <HelpKINode Title="text field" Url="html/F-global.Card.text.htm" />
+  <HelpKINode Title="theGameState field">
+    <HelpKINode Title="theGameState Field" Url="html/F-global.DiceRoller.theGameState.htm" />
+    <HelpKINode Title="theGameState Field" Url="html/F-global.DiceTotalDisplay.theGameState.htm" />
+    <HelpKINode Title="theGameState Field" Url="html/F-global.Player.theGameState.htm" />
+    <HelpKINode Title="theGameState Field" Url="html/F-global.CurrentPlayerDisplay.theGameState.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Tile class">
+    <HelpKINode Title="Tile Class" Url="html/T-global.Tile.htm" />
+    <HelpKINode Title="Tile Members" Url="html/AllMembers.T-global.Tile.htm" />
+    <HelpKINode Title="about Tile class" Url="html/T-global.Tile.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Tile.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Tile.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Tile.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.Tile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Tile.GetName method" Url="html/M-global.Tile.GetName.htm" />
+  <HelpKINode Title="Tile.GetNextTile method" Url="html/M-global.Tile.GetNextTile.htm" />
+  <HelpKINode Title="Tile.IsPurchasable method" Url="html/M-global.Tile.IsPurchasable.htm" />
+  <HelpKINode Title="Tile.nextTile field" Url="html/F-global.Tile.nextTile.htm" />
+  <HelpKINode Title="Tile.tileName field" Url="html/F-global.Tile.tileName.htm" />
+  <HelpKINode Title="TileDescription method" Url="html/M-global.Player.TileDescription.htm" />
+  <HelpKINode Title="tileName field" Url="html/F-global.Tile.tileName.htm" />
+  <HelpKINode Title="tiles field" Url="html/F-global.Monopoly.tiles.htm" />
+  <HelpKINode Title="Transport class">
+    <HelpKINode Title="Transport Class" Url="html/T-global.Transport.htm" />
+    <HelpKINode Title="Transport Members" Url="html/AllMembers.T-global.Transport.htm" />
+    <HelpKINode Title="about Transport class" Url="html/T-global.Transport.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Transport.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.Transport.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Transport.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.Transport.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TRANSPORT enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="TRANSPORT field" Url="html/F-global.Colour.TRANSPORT.htm" />
+  <HelpKINode Title="Transport.PayRent method" Url="html/M-global.Transport.PayRent.htm" />
+  <HelpKINode Title="Transport.Transport constructor" Url="html/M-global.Transport.-ctor.htm" />
+  <HelpKINode Title="TurnPhase.ANIMATING field" Url="html/F-global.Monopoly.TurnPhase.ANIMATING.htm" />
+  <HelpKINode Title="TurnPhase.DONE_ANIMATING field" Url="html/F-global.Monopoly.TurnPhase.DONE_ANIMATING.htm" />
+  <HelpKINode Title="TurnPhase.DONE_CLICKING field" Url="html/F-global.Monopoly.TurnPhase.DONE_CLICKING.htm" />
+  <HelpKINode Title="TurnPhase.DONE_ROLLING field" Url="html/F-global.Monopoly.TurnPhase.DONE_ROLLING.htm" />
+  <HelpKINode Title="TurnPhase.NEW_TURN field" Url="html/F-global.Monopoly.TurnPhase.NEW_TURN.htm" />
+  <HelpKINode Title="TurnPhase.WAITING field" Url="html/F-global.Monopoly.TurnPhase.WAITING.htm" />
+  <HelpKINode Title="TurnPhase.WAITING_FOR_ANIMATION field" Url="html/F-global.Monopoly.TurnPhase.WAITING_FOR_ANIMATION.htm" />
+  <HelpKINode Title="TurnPhase.WAITING_FOR_ROLL field" Url="html/F-global.Monopoly.TurnPhase.WAITING_FOR_ROLL.htm" />
+  <HelpKINode Title="type field" Url="html/F-global.Action.type.htm" />
+  <HelpKINode Title="Update method">
+    <HelpKINode Title="Update Method " Url="html/M-global.CurrentPlayerDisplay.Update.htm" />
+    <HelpKINode Title="Update Method " Url="html/M-global.Monopoly.Update.htm" />
+    <HelpKINode Title="Update Method " Url="html/M-global.Player.Update.htm" />
+    <HelpKINode Title="Update Method " Url="html/M-global.DiceRoller.Update.htm" />
+    <HelpKINode Title="Update Method " Url="html/M-global.GameSettings.Update.htm" />
+    <HelpKINode Title="Update Method " Url="html/M-global.DiceTotalDisplay.Update.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UsesJailFree method" Url="html/M-global.Player.UsesJailFree.htm" />
+  <HelpKINode Title="Utility class">
+    <HelpKINode Title="Utility Class" Url="html/T-global.Utility.htm" />
+    <HelpKINode Title="Utility Members" Url="html/AllMembers.T-global.Utility.htm" />
+    <HelpKINode Title="about Utility class" Url="html/T-global.Utility.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Utility.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.Utility.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Utility.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.Utility.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UTILITY enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="UTILITY field" Url="html/F-global.Colour.UTILITY.htm" />
+  <HelpKINode Title="Utility.PayRent method" Url="html/M-global.Utility.PayRent.htm" />
+  <HelpKINode Title="Utility.Utility constructor" Url="html/M-global.Utility.-ctor.htm" />
+  <HelpKINode Title="value field" Url="html/F-global.Action.value.htm" />
+  <HelpKINode Title="value2 field" Url="html/F-global.Action.value2.htm" />
+  <HelpKINode Title="velocity field" Url="html/F-global.Player.velocity.htm" />
+  <HelpKINode Title="WAITING enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="WAITING field" Url="html/F-global.Monopoly.TurnPhase.WAITING.htm" />
+  <HelpKINode Title="WAITING_FOR_ANIMATION enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="WAITING_FOR_ANIMATION field" Url="html/F-global.Monopoly.TurnPhase.WAITING_FOR_ANIMATION.htm" />
+  <HelpKINode Title="WAITING_FOR_ROLL enumeration member" Url="html/T-global.Monopoly.TurnPhase.htm" />
+  <HelpKINode Title="WAITING_FOR_ROLL field" Url="html/F-global.Monopoly.TurnPhase.WAITING_FOR_ROLL.htm" />
+  <HelpKINode Title="YELLOW enumeration member" Url="html/T-global.Colour.htm" />
+  <HelpKINode Title="YELLOW field" Url="html/F-global.Colour.YELLOW.htm" />
+</HelpKI>

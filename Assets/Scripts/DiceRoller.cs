@@ -1,17 +1,41 @@
-﻿using UnityEngine.UI;
+﻿// ***********************************************************************
+// Assembly         : Assembly-CSharp
+// Author           : User
+// Created          : 05-09-2018
+//
+// Last Modified By : User
+// Last Modified On : 05-10-2018
+// ***********************************************************************
+// <summary>Represents the dice for each player</summary>
+// ***********************************************************************
+using UnityEngine.UI;
 using UnityEngine;
 
 
+/// <summary>
+/// Class DiceRoller.
+/// </summary>
 public class DiceRoller : MonoBehaviour
 {
 
+    /// <summary>
+    /// The game state
+    /// </summary>
     private Monopoly theGameState;
 
+    /// <summary>
+    /// The numbers on the dice
+    /// </summary>
     public int[] dice;
+    /// <summary>
+    /// The dice image
+    /// </summary>
     public Sprite[] diceImage;
 
 
-    // Use this for initialization
+    /// <summary>
+    /// Starts this instance.
+    /// </summary>
     void Start()
     {
         theGameState = GameObject.FindObjectOfType<Monopoly>();
@@ -20,13 +44,16 @@ public class DiceRoller : MonoBehaviour
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// Updates this instance.
+    /// </summary>
     void Update()
     {
     }
 
-    // Generate two random numbers.
-    // Check whether double roll is due.
-    // Print the graphic.
+    /// <summary>
+    /// Rolls the dice. By generating two random numbers between 1-6. And checks for double roll. Updates graphic.
+    /// </summary>
     public void RollTheDice()
     {
         if (theGameState.isDoneClicking)
@@ -72,6 +99,10 @@ public class DiceRoller : MonoBehaviour
         //theGameState.currentPhase = Monopoly.TurnPhase.DONE_ROLLING;
     }
 
+    /// <summary>
+    /// Gets the latest roll.
+    /// </summary>
+    /// <returns>System.Int32[].</returns>
     public int[] GetRoll()
     {
         return dice;
